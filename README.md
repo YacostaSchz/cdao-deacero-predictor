@@ -332,10 +332,7 @@ Response: MAPE, feature importance, model metadata
 ## 📞 Contacto e Información
 
 **Candidato**: Yazmín Acosta  
-**Email**: dra.acostas@gmail.com  
-**Proyecto GCP**: cdo-yacosta  
-**Project ID**: cdo-yacosta  
-**Project Number**: 190635835043  
+**Email**: dra.acostas@gmail.com   
 
 **Documentación Completa**: Ver `DOCUMENTACION_COMPLETA_ENTREGA.md` para validación exhaustiva línea por línea vs `reto_tecnico.txt`
 
