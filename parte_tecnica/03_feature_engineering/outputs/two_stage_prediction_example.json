@@ -1,0 +1,15 @@
+{
+  "lme_forecast": 540.74,
+  "premium_forecast": 1.6883,
+  "price_usd": 912.94,
+  "price_mxn": 17163.19,
+  "confidence_interval_usd": [
+    881.14,
+    944.73
+  ],
+  "confidence_interval_mxn": [
+    16565.43,
+    17760.94
+  ],
+  "fx_rate_used": 18.8
+}

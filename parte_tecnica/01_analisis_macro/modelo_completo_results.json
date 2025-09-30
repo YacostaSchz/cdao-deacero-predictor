@@ -1,0 +1,32 @@
+{
+  "model_type": "VECM",
+  "variables": [
+    "REBAR",
+    "IRON_ORE",
+    "CRUDE_BRENT",
+    "COAL_AUS",
+    "NGAS_US",
+    "NGAS_EUR",
+    "NGAS_JP"
+  ],
+  "optimal_lag": 1,
+  "coint_rank": 1,
+  "elasticities": {
+    "IRON_ORE": 3.501399842151804,
+    "COAL_AUS": 3.1069714224213785,
+    "CRUDE_BRENT": 2.178075442000604,
+    "NGAS_EUR": -1.0711481095987325,
+    "NGAS_JP": -0.7138738429554339,
+    "NGAS_US": 0.14535774286804382
+  },
+  "fevd_12m": {
+    "REBAR": 0.8,
+    "IRON_ORE": 0.14285714285714285,
+    "CRUDE_BRENT": 0.14285714285714285,
+    "COAL_AUS": 0.14285714285714285,
+    "NGAS_US": 0.14285714285714285,
+    "NGAS_EUR": 0.14285714285714285,
+    "NGAS_JP": 0.14285714285714285
+  },
+  "validation_mape": null
+}

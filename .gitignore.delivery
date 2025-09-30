@@ -1,0 +1,104 @@
+# .gitignore TEMPORAL para Entrega a GitHub
+# Este archivo permite subir archivos importantes para la evaluación
+
+# Environment variables (SIEMPRE excluir)
+.env
+.env.local
+.env.*.local
+**/*.env
+!.env.example
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Virtual Environment (NUNCA subir)
+venv/
+ENV/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs (excluir logs grandes)
+logs/
+*.log
+
+# Testing cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# APM Framework (innecesario para evaluadores)
+.sanctum/
+.cursor/
+.specstory/
+AGENTS_*.md
+APM_*.md
+BACKGROUND_AGENTS_GUIDE.md
+SACRED_VIGILANCE_LOGS_EXPLANATION.md
+VALIDATION_STATUS_*.md
+validate_agents.sh
+start_agents.sh
+SESSION_SUMMARY_*.md
+
+# Git
+.git/
+*.orig
+
+# Temporal
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+
+# PERMITIR archivos importantes para la entrega:
+# (Estos NO se excluyen a pesar de ser .pkl, .csv, etc.)
+
+# ✅ Modelos entrenados (IMPORTANTE)
+!parte_tecnica/03_feature_engineering/outputs/*.pkl
+!parte_tecnica/03_feature_engineering/outputs/*.model
+
+# ✅ Datasets procesados (IMPORTANTE)  
+!parte_tecnica/02_data_extractors/outputs/*.csv
+!parte_tecnica/03_feature_engineering/outputs/*.csv
+!parte_tecnica/03_feature_engineering/outputs/*.xlsx
+
+# ✅ Datos fuente originales (IMPORTANTE)
+!docs/sources/**/*.csv
+!docs/sources/**/*.xlsx
+!docs/sources/**/*.xls
+!docs/sources/**/*.md
+!docs/sources/**/*.txt
+
+# ✅ PDFs de documentación (IMPORTANTE)
+!docs/requirement/*.pdf
+!parte_estrategica/**/*.pdf
+
+# ✅ Documentos de entrega (IMPORTANTE)
+!DOCUMENTACION_COMPLETA_ENTREGA.md
+!ENTREGA_FINAL.md
+!COMPLETION_CERTIFICATE.md
+!CORREO_ENTREGA.md
+!VALIDACION_CORREO_VS_RETO.md
+!README.md
+
+# Excluir backups y duplicados
+**/backups/
+*.backup
+*_backup_*
+
+# Excluir archivos muy grandes (>100MB)
+# Si tienes archivos específicos muy grandes, agrégalos aquí

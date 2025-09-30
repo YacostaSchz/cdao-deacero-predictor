@@ -1,0 +1,954 @@
+                   Instrucciones de Prueba - Chief Data Officer (CDO) DeAcero (Parte
+        Estrategia)
+
+        1. Introducción
+
+        Estimado candidato,
+Enhorabuena por avanzar en el proceso para el puesto de Chief Data Officer (CDO) en
+DeAcero. DeAcero es una de las siderúrgicas líderes en México, con una operación a gran
+escala (capacidad anual de producción superior a 4.5 millones de toneladas de acero[1]) y un
+fuerte compromiso con la sustentabilidad, reciclando alrededor de 4.7 millones de toneladas de
+chatarra férrica cada año[2]. En este contexto, el rol de CDO es crítico para impulsar la
+optimización de procesos y la toma de decisiones basada en datos, garantizando mejoras en
+eficiencia operativa, calidad y servicio al cliente.
+
+El propósito de esta prueba técnica es evaluar de manera integral sus habilidades
+estratégicas, analíticas y de comunicación en un escenario de negocio realista. Usted deberá
+demostrar cómo, desde la posición de CDO, podría aprovechar datos y analitica para mejorar
+indicadores clave de desempeño (KPIs) de la empresa. En particular, el caso de estudio se
+enfoca en tres KPIs críticos del negocio: Scrap, OTIF y Consumo de Energía. Al finalizar esta
+prueba, se espera que usted presente un plan estratégico fundamentado en datos que aborde
+estos indicadores, considerando diferentes opciones y recomendaciones viables para
+DeAcero.
+
+Objetivo general del test: Proponer una estrategia de datos de alto nivel que permita a DeAcero
+lograr mejoras significativas en los KPIs de scrap (merma), OTIF (On-Time In-Full, entregas a
+tiempo y completas) y eficiencia energética, todo ello dentro de las restricciones reales de
+negocio. No se trata de resolver técnicamente cada detalle, sino de estructurar un plan sólido y
+convincente que demuestre su visión estratégica y capacidad de priorización como futuro CDO
+de la compañía.
+
+2. Descripción e Instrucciones de la Prueba
+
+En esta prueba se le proporciona un escenario único de negocio que deberá analizar y resolver
+en un plazo de 7 días. A continuación, se detallan los elementos del caso, incluyendo los
+supuestos de negocio, los objetivos numéricos a alcanzar, las estrategias a considerar y las
+restricciones existentes. Por favor lea cuidadosamente cada sección antes de comenzar su
+trabajo.
+
+
+
+
+          2.1 Supuestos de Negocio
+
+          Se plantea la siguiente situación hipotética dentro de DeAcero, que servirá
+          de base para el ejercicio:
+
+             ●​ Operación y contexto: Usted asume el rol de CDO en una planta
+                principal de DeAcero dedicada a productos de acero largos (varilla,
+                alambrón, etc.). La empresa opera hornos de arco eléctrico (EAF)
+                que utilizan chatarra reciclada como materia prima. Actualmente, la
+                planta produce aproximadamente 1,000,000 de toneladas de acero
+                por año, con una línea de productos diversificada y demandas
+                exigentes de los clientes en cuanto a calidad y entrega.
+             ●​ Problemas actuales: En los últimos trimestres, la operación ha
+                enfrentado desafíos en tres áreas clave:
+             ●​ Elevado nivel de Scrap (merma): Aproximadamente un 5% de la
+                producción termina como scrap o desperdicio no vendible (piezas
+                defectuosas, material fuera de especificación, recortes no
+                reutilizados, etc.). Este scrap representa pérdidas tanto de material
+                como de tiempo y energía invertidos en producir productos que no
+                generan ingresos[3][4]. (Nota: "Scrap" se refiere a materiales o
+                productos defectuosos descartados durante el proceso de
+                fabricación, es decir, merma productiva[5].)
+             ●​ Desempeño OTIF subóptimo: El indicador On-Time In-Full
+                (entregas a tiempo y completas) se ha mantenido en torno al 85%.
+                Esto significa que un 15% de los pedidos no se entregan
+   puntualmente y en la cantidad correcta. Un rendimiento OTIF bajo
+   tiene consecuencias negativas en la satisfacción de los clientes y en
+   la reputación de DeAcero[6], además de incurrir en costos
+   adicionales por envíos urgentes o penalizaciones contractuales. (Por
+   ejemplo, algunos clientes clave imponen penalizaciones de hasta
+   ~3% del valor del pedido por entregas tardías o incompletas[7], lo
+   que afecta directamente los ingresos).
+●​ Alto consumo de energía: El proceso de producción actual no es lo
+   suficientemente eficiente en términos energéticos. Los hornos de
+   arco consumen en promedio ~440 kWh por tonelada de acero
+   producido[8]. La factura eléctrica anual es significativa y se ha
+   identificado oportunidad de mejorar la eficiencia energética de los
+   equipos y procesos. Una alta intensidad de energía no solo eleva los
+   costos operativos, sino que también incrementa la huella de carbono
+   de la empresa, un aspecto sensible dada la estrategia de
+   sustentabilidad corporativa.
+●​ Infraestructura de datos actual: DeAcero cuenta con múltiples
+   sistemas (SCADA de planta, ERP corporativo, sistemas de logística,
+   etc.) que generan datos valiosos, pero existen silos de información.
+   Por ejemplo, los datos de calidad y producción no están plenamente
+   integrados con los datos logísticos, dificultando una visión holística
+   de causa-efecto (p. ej., cómo la calidad impacta entregas). La
+   gobernanza de datos está en fase inicial: se están definiendo
+   catálogos de datos y roles, pero persisten problemas de calidad en la
+   información (datos duplicados, faltantes en registros, definiciones no
+   homologadas entre áreas).
+●​ Equipo y apoyo: Usted cuenta con un equipo multifuncional a su
+   disposición (ingenieros de datos, analistas de negocio, personal de
+   TI de la planta, etc.) y patrocinio del CEO y del Director de
+   Operaciones para llevar a cabo un proyecto estratégico de mejora.
+   Hay disposición de la organización para invertir en soluciones de
+   datos y tecnología siempre que el retorno esperado esté claro. La
+   alta dirección espera que el CDO proponga el camino a seguir
+     respaldado por análisis cuantitativo sólido y con una comprensión
+     clara de las implicaciones financieras.
+
+(Estos supuestos proveen el marco dentro del cual debe trabajar. Si
+considera necesario, puede hacer supuestos adicionales razonables; solo
+asegúrese de documentarlos en su solución.)
+
+
+
+
+2.2 Objetivos Numéricos (KPIs a Mejorar)
+
+Con base en el contexto anterior, la alta dirección de DeAcero ha
+establecido objetivos concretos que se deberán alcanzar en el mediano
+plazo (próximos 12-18 meses). Estos objetivos cuantitativos servirán para
+guiar su análisis y medir el impacto esperado de las estrategias
+propuestas:
+
+  ●​ Reducir Scrap: Bajar el índice de scrap del 5% actual a 3% o menos.
+     Esto implica disminuir sustancialmente la merma y desperdicios en
+     producción. La reducción de scrap debe traducirse en ahorros de
+     costos (menos reproceso, menor compra de materia prima adicional)
+     y mejoras de productividad. Ejemplo numérico: pasar de 50,000
+     toneladas/año de scrap desperdiciado a 30,000 ton/año o menos.
+  ●​ Mejorar OTIF: Aumentar el desempeño OTIF del ~85% actual a por
+     lo menos 95%[9]. Un 95% de entregas "a tiempo y completas" se
+     considera un estándar de clase mundial en la industria[9]. El logro de
+     esta meta eliminaría virtualmente las penalizaciones por servicio y
+     mejoraría la confianza de los clientes estratégicos. Ejemplo: de 15%
+     de pedidos fuera de término, bajar a solo 5% (reduciendo cientos de
+     entregas tardías por año).
+  ●​ Incrementar Eficiencia Energética: Reducir el consumo de energía
+     por tonelada en al menos un 10% sin sacrificar producción. Esto
+     significaría pasar de ~440 kWh/ton a alrededor de 400 kWh/ton o
+     mejor. Dicha mejora generaría un ahorro significativo en costos
+     energéticos anuales y apoyaría los compromisos ambientales de
+     DeAcero (reduciendo emisiones de CO, asociadas a la electricidad).
+     Ejemplo numérico: si el costo eléctrico anual es ~$36 millones USD,
+     una reducción del 10% ahorraría ~$3.6 millones por año en costos
+     de energía, además de disminuir la intensidad de carbono del
+     proceso.
+
+Estos KPIs (Scrap, OTIF, Energía) serán las métricas clave de éxito. Sus
+propuestas deberán indicar cómo contribuyen a alcanzar estas metas
+numéricas. Se valorará que cuantifique los impactos estimados de cada
+estrategia en estos indicadores. Recuerde que los objetivos pueden tener
+tensiones entre sí (por ejemplo, ciertas mejoras podrían favorecer un KPI a
+costa de otro), por lo que será importante priorizar y buscar soluciones
+balanceadas.
+
+
+
+2.3 Estrategias a Evaluar (Tres Opciones)
+
+Usted deberá desarrollar tres estrategias distintas y mutuamente
+excluyentes para lograr los objetivos mencionados. Cada estrategia debe
+entenderse como un camino integral que la empresa podría seguir. Solo se
+implementará una de ellas, por lo que est crucial analizar pros y contras de
+cada opción. A continuación se describen lineamientos para cada
+estrategia y lo que se espera que cubra en su análisis:
+
+  ●​ Estrategia 1: Analítica Avanzada para Optimización de Calidad y
+     Scrap Descripción: Enfocar los esfuerzos de datos en el proceso
+productivo para minimizar defectos y desperdicios. Esto podría
+implicar implementar sistemas de monitoreo en tiempo real de la
+producción y modelos de analítica predictiva paral control de calidad.
+Por ejemplo, sensores e loT en las líneas que capturen datos de
+temperaturas, velocidades, composición química, etc., alimentando
+un sistema de analítica que alerte desviaciones antes de que se
+produzca scrap. Se podría adoptar un MES (Manufacturing Execution
+System) avanzado o algoritmos de machine learning para predecir
+defectos.
+Impactos esperados: Una reducción significativa del scrap
+(idealmente 15-20% menos desperdicio inicialmente, según
+benchmarks de la industria al usar monitoreo en tiempo real[3]). Esto
+mejoraría la eficiencia del uso de materia prima y reduciría costos de
+reproceso. También habría beneficios en consumo energético, ya
+que cada pieza defectuosa evitada ahorra la energía que se habría
+gastado en producirla inútilmente[4]. Indirectamente, la mejora en
+calidad puede elevar la satisfacción del cliente (menos lotes
+rechazados o retrabajos). Costo estimado: Moderado a alto.
+Involucra invertir en sensores, infraestructural IoT, plataformas de
+datos industriales y talento especializado (científicos de datos,
+ingenieros de automatización). Podría requerir, por ejemplo, una
+inversión de US\$2-4 millones en sistemas y capacitación. Sin
+embargo, los ahorros potenciales por reducción de scrap (millones
+de USD anuales) y energía pueden justificar la inversión en un plazo
+razonable.
+Riesgos: a) Tecnológico: Integrar nuevos sistemas al ambiente fabril
+puede ser complejo; riesgo de problemas de interoperabilidad con
+maquinaria existente. b) Organizacional: Requiere capacitar al
+personal de planta para confiar y actuar según las recomendaciones
+de un sistema automático; posible resistencia al cambio en
+operadores veteranos. c) Datos: Es crucial contar con datos de
+buena calidad y suficientemente granulares; si la calidad de datos de
+             sensores es pobre o hay muchas alarmas falsas, se puede perder
+             confianza en las herramientas.
+
+
+          ●​ Estrategia 2: Cadena de Suministro Inteligente y Mejora
+             de OTIF
+  Descripción: Orientar la estrategia de datos hacia la optimización logística y de
+planificación, con el fin de mejorar la entrega a clientes. Esto podría incluir
+implementar una plataforma integrada de visibilidad en tiempo real de la cadena de
+suministro (por ejemplo, sistemas tipo TMS/OMS avanzados o herramientas de supply
+chain analytics que consoliden datos de producción, inventarios, transporte y
+demanda). También se considerarían modelos de pronóstico de demanda más
+precisos (usando analítica avanzada) para mejorar la planificación de producción y
+disminuir quiebres de stock, así como herramientas de ruteo y seguimiento de
+entregas para garantizar cumplimiento de ventanas de entrega. La estrategia puede
+contemplar colaborar más estrechamente con clientes en intercambio de datos. (EDI)
+para alineación de demanda.
+Impactos esperados: El objetivo principal es elevar el OTIF a ~95% (reduciendo
+retrasos y faltantes). Con una mejor visibilidad y coordinación, se evitarían
+situaciones de entregas tardías; por ejemplo, se podría detectar anticipadamente
+demoras en transporte y re-enrutar camiones o ajustar producción en tiempo real. Un
+OTIF mejorado reduce penalizaciones (que actualmente podrían costar cientos de
+miles de dólares anuales) y mejora las relaciones con clientes[6][7]. Adicionalmente,
+una cadena eficiente podría disminuir inventarios de seguridad (liberando capital de
+trabajo) y posiblemente también aportar a reducir scrap al alinear mejor la producción
+con demanda (menos producto sobreproducido que termine obsoleto o como
+desperdicio).
+Costo estimado: Moderado. Implica invertir en software de cadena de suministro (p.
+ej., módulos avanzados del ERP o soluciones especializadas de mercado, integración
+EDI) y posiblemente en infraestructura telemática para seguimiento de entregas. Se
+estima una inversión de US\$1-2 millones en tecnología y consultoría de
+implementación. Parte del esfuerzo también requerirá horas de trabajo de distintas
+áreas (logística, ventas, producción) para redefinir procesos apoyados en datos.
+Riesgos: a) Dependencia multi-área: La mejora de OTIF involucra coordinación entre
+producción, almacenes, transportistas y clientes; si alguna parte falla en adoptar los
+nuevos procesos, la mejora total se ve limitada. b) Calidad de datos externos: Los
+pronósticos y planes serán tan buenos como la calidad de datos de entrada (órdenes
+de clientes, estimados de venta); si la calidad o oportunidad de esos datos es baja,
+las predicciones pueden fallar. c) Cambio cultural: Pasar a toma de decisiones más
+dinámica (ej. replanificar producción sobre la marcha por datos de predicción) puede
+encontrar resistencia; se requerirá gestión del cambio robusta.
+
+
+          ●​ Estrategia 3: Eficiencia Energética y Arquitectura Tecnológica de Planta
+             Descripción: Enfocar la estrategia en modernizar la arquitectura de datos
+             y control de la planta para maximizar la eficiencia operativa,
+             particularmente el consumo de energía. Esto podría implicar implementar
+             sistemas de Energy Management avanzados que monitoricen en tiempo
+             real el consumo eléctrico de hornos y otros equipos mayores, aplicando
+             analitica para optimizar su uso (p.ej.. ajustando dinámicamente
+             parámetros de homo para ahorrar energía sin afectar la calidad, o
+             planificando los ciclos de fusión en horarios de tarifa más baja).
+             Asimismo, invertir en automatización y control avanzado de procesos
+             (por ejemplo, controladores inteligentes de potencia para hornos
+             eléctricos de alto rendimiento[8]) que eleven la eficiencia. Una parte
+             clave de esta estrategia seria actualizar la arquitectura de datos en
+             planta: integrar SCADA, sensores de energia, producción y calidad en un
+             data lake o plataforma unificada que permita análisis holistico y
+             optimizaciones cruzadas.
+             Impactos esperados: El beneficio directo es reducir al menos 10% el
+            consumo energético por tonelada, cumpliendo el objetivo propuesto. Esto
+            equivale a ahorros anuales considerables (p.ej., varios millones de dólares
+            en electricidad). Además, al optimizar el proceso productivo via mejor
+            control, se espera una mejora colateral en scrap (una operación más
+            estable genera menos defectos) y potencialmente ligeras mejoras en
+            OTIF (por menor variabilidad en tiempos de producción). También
+          reforzaria los objetivos de sustentabilidad, reduciendo la huella de
+          carbono del acero producido por DeAcero, Cabe señalar que fabricantes
+          que han implementado optimización energética y automatización han
+          logrado reducciones de costos totales significativas, ganando ventaja
+          competitiva en costos unitarios.
+          Costo estimado: Alto. Esta estrategia conlleva inversiones en hardware
+          industrial (sensores adicionales, controladores de nueva generación,
+          posible renovación de componentes en hornos), software industrial (IoT
+          platforms, sistemas de gestión de energía) y en la integración de datos
+          (arquitectura TI/OT). Podría requerir US $3- 5 millones o más,
+          dependiendo del alcance (por ejemplo, actualizar un horno principal podria
+          ser muy costoso, pero tal vez justificable por ahorros). Sin embargo,
+          existen opciones modulares o pilotos que podrían escalarse
+          progresivamente para distribuir la inversión.
+          Riesgos: a) Retorno de inversión a largo plazo: Los ahorros en energía,
+          aunque sustanciales, podrían tardar un par de años en cubrir la inversión;
+          la empresa debe estar comprometida con una visión de largo plazo. b)
+          Interrupciones operativas: La instalación de nuevos equipos o sensores
+          podría requerir paros programados; si La ejecución no se planifica bien,
+          hay riesgo de afectar la producción en el corto plazo. c) Complejidad
+          técnica: Integrar datos de distintas fuentes (operacionales de planta con
+          sistemas corporativos) y garantizar ciberseguridad en entornos industriales
+          aumentará la complejidad del proyecto; se necesitará talento especializado
+          y posiblemente apoyo de proveedores expertos.
+
+Importante: Las tres estrategias arriba descritas son opciones mutuamente
+excluyentes - es decir, se asume que la empresa elegiría una de ellas para
+implementar inicialmente. Usted debe analizar las tres, pero podrá recomendar una
+como la más adecuada en base al impacto y factibilidad. Se valorará que presente un
+argumento claro de por qué cierta estrategia es preferible dadas las metas y
+restricciones. Cada estrategia debe incluir cuantificaciones estimadas (basadas en los
+datos provistos en esta guía, ver sección 3) para sustentar su potencial impacto (ej.:
+"Estrategia X ahorraría ~ \$Y al año en costos, vs estrategia Z ahorraria \$Z").
+  También considere la interdependencia: aunque se elija una ruta, puede mencionar si
+  las otras podrían implementarse más adelante o qué sacrificios implica no tomarlas
+  ahora.
+
+
+2.4 Restricciones y Consideraciones
+
+        El caso contempla restricciones reales, tanto financieras como operativas, que
+deberán enmarcar sus recomendaciones. Asegúrese de tenerlas presentes al desarrollar
+sus soluciones, para garantizar que sus propuestas sean viables y realistas dentro del
+contexto dado:
+
+           ●​ Presupuesto limitado: Para este proyecto estratégico inicial, la inversión
+              disponible es limitada. Se estima un presupuesto máximo de
+              aproximadamente \US $5 millones para ejecutar la estrategia elegida en
+              un horizonte de 1-2 años. Esto incluye gastos en tecnologia, capacitación,
+              consultoría, etc. Sus propuestas deben ajustarse a este tope, priorizando
+              las iniciativas de mayor retorno. Si una estrategia excede claramente este
+              presupuesto, deberá justificar por qué deberia considerarse una excepción
+              o cómo podría escalonarse en fases.
+           ●​ Plazo de implementación: La alta dirección desea ver resultados tangibles
+              en el corto y mediano plazo. Se espera que en 12 meses ya se hayan
+              logrado mejoras apreciables en los KPIs (aunque no necesariamente la
+              meta final al 100%). Por lo tanto, las estrategias propuestas deben poder
+              empezar a ejecutarse rápidamente. Evite soluciones que requieran
+              proyectos de varios años antes de generar valor. Considere también que el
+              plazo de la prueba (4 días) refleja la expectativa de que usted puede
+              proponer un plan de alto nivel; no se espera un plan de proyecto detallado
+              dia a dia, pero si una secuencia lógica de hitos para lograr resultados en el
+              plazo deseado.
+           ●​ Operación en marcha: DeAcero no puede darse el lujo de detener su
+              producción por largos periodos. Cualquier cambio o implementación debe
+              realizarse con la planta operando (aprovechando paros planeados,
+              tiempos muertos, etc.). Sus estrategias deben indicar si requieren
+                interrupciones significativas y proponer cómo minimizarlas.
+             ●​ Limitaciones de personal y cultura: Aunque la empresa apoya este
+                proyecto, los empleados de distintas áreas ya tienen cargas de trabajo
+                operativas. Las soluciones que impliquen una elevada carga adicional de
+                trabajo manual o cambios culturales extremos podrían enfrentar resistencia.
+                Considere planes de gestión del cambio, entrenamiento y comunicación
+                como parte de la estrategia (especialmente relevante si propone nuevas
+                herramientas que los usuarios finales deben adoptar).
+             ●​ Politicas y compliance: Cualquier iniciativa debe respetar las políticas
+                internas y regulaciones aplicables. Por ejemplo, en manejo de datos
+                asegúrese que se cumplan lineamientos de privacidad o seguridad (si
+                correspondiera, e.g. datos personales en sistemas). En la dimensión
+                técnica, nuevas tecnologías deben alinearse con los estándares de IT/OT
+                de DeAcero para ciberseguridad y soporte a largo plazo.
+
+  En sintesis, queremos ver soluciones ambiciosas pero realizables, que demuestren
+  visión estratégica ajustada a las realidades de la empresa. Muestre que entiende las
+  prioridades del negocio y que sabe balancear beneficios con costos y riesgos. Es válido
+  mencionar supuestos adicionales si alguna restricción no está claramente definida,
+  pero hágalo explicitamente en su documento.
+
+
+3. Datos Base Proporcionados para Análisis
+
+A continuación se enumeran datos cuantitativos y parámetros que puede utilizar para
+sustentar cálculos y estimaciones en su análisis. Estos datos base son ficticios pero han
+sido calibrados para reflejar magnitudes realistas del negocio de DeAcero. Se recomienda
+usarlos para calcular ahorros, costos evitados, mejoras porcentuales, ROI de estrategias,
+etc..
+
+             ●​ Volumen de Producción: ~1,000,000 de toneladas de acero terminadas
+                por año (producción actual de la planta en estudio).
+             ●​ Nivel de Scrap actual: 5% de la producción. Esto equivale a 50,000
+                ton/año de acero que terminan como desperdicio/merma.
+●​ Costo asociado al Scrap: Se estima que por cada tonelada de scrap, la
+   pérdida económica directa es de $200 USD. (Esta cifra considera costos de
+   materia prima, energía y mano de obra invertidos en producto defectuoso.
+   En la realidad, parte de este scrap puede reciclarse internamente, pero aun
+   así implica reprocesos costosos.) - En total, el costo anual del scrap actual
+   seria aproximadamente 50,000 ton*\ $200 = \$10 millones USD/año.
+   Reducir el scrap mejora directamente este rubro (p.ej., una reducción a
+   30,000 ton/año implicaria ahorrar \$4 millones respecto a la línea base).
+●​ OTIF actual: 85% de los pedidos se entregan a tiempo y completos; 15%
+   tienen algún incumplimiento (retraso o faltante).
+●​ Volumen de Pedidos: ~10,000 pedidos de clientes por año (promedio,
+   variando en tamaño). Valor medio por pedido ~$20,000 USD.
+●​ Penalizaciones por OTIF bajo: Los contratos con clientes estratégicos
+   estipulan penalizaciones de 3% del valor del pedido por entregas fuera de
+   OTIF[7] (ya sea retraso en tiempo o entrega incompleta). Actualmente con
+   15% de 10,000 pedidos (~1,500 pedidos tardíos), la penalización teórica
+   máxima podría rondar: 1,500 * \$20,000 * 3% ≈ \$900,000 USD anuales.
+   (Nota: No todos los clientes aplican multas, pero este cálculo sirve para
+   dimensionar el costo potencial de un OTIF deficiente, sin contar costo de
+   oportunidad por insatisfacción del cliente.)
+●​ Costo de Transporte Urgente: Adicional a las multas, cada pedido
+   retrasado a veces obliga a envíos acelerados (fletes express, horas
+   extra) con un costo promedio adicional de \$500 USD por incidente. Con
+   ~1,500 incidentes, son \$750,000 USD al año en sobrecostos logisticos
+   por correr a último momento. Mejorar OTIF ahorra también buena parte
+   de estos gastos.
+●​ Objetivo OTIF: 95%. Esto implica bajar los incidentes anuales de 1,500 a
+   500 (1,000 pedidos más al año entregados perfectamente). Las
+   penalizaciones residuales serian minimas (~\300k) y los sobrecostos
+   logisticos también bajarian proporcionalmente. Además, un mejor OTIF
+   puede traducirse en mayores ventas a futuro (clientes renovando contratos,
+   otorgando más volumen a DeAcero por buen servicio), aunque eso es dificil
+   de cuantificar en el corto plazo.
+●​ Consumo Energético: ~450 kWh/ton en promedio actualmente (indicador
+   agregado, principalmente por hornos EAF y otros equipos). En total ~450
+   GWh al año.
+●​ Costo de Energía: \$0.08 USD por kWh (tarifa industrial promedio). Así, el
+   gasto anual en energía es del orden de \$36,000,000 USD.
+●​ Objetivo de Reducción de Energía: 10% menos kWh/ton (pasar de 450 a ~405
+   kWh/ton). Esto ahorraría ~45 GWh al año, equivalente a \$3.6 millones USD
+   menos en costos energéticos por año.
+●​ Costos de Implementación (referenciales):
+●​ Solución integral de monitoreo de calidad con loT/MES para planta mediana:
+   \$2M a \$3M (licencias + hardware + desarrollo).
+●​ Plataforma de visibilidad supply chain e integraciones: \$1M a
+   \$2M.
+●​ Upgrades de equipo de control de hornos o sistemas de energía: \$2M a
+   \$4M (dependiendo de alcance).
+  (Estos rangos son solo para guiar y pueden usarse para comparar
+  contra los ahorros.)
+●​ Tasa de Descuento / Costo de Capital: ~10% anual. (Opcional, si desea
+   mencionar el valor presente neto de las inversiones vs ahorros en varios
+   años.) Otros datos: Puede asumir precio de venta del acero terminado ~\$700
+   USD/ton para dimensionar oportunidades de ingreso si correspondiera, y
+   precio de chatarra reciclada \$300/ton (por ejemplo) si necesita referenciar
+   valor de material. También puede suponer que la producción actual cubre
+   justo la demanda, es decir, reducir scrap efectivamente podría permitir vender
+   más toneladas (hasta ese 5% adicional) si hubiera mercado, o
+   alternativamente ahorraría compras de materia prima.
+Usando estos datos, en su análisis numérico se espera, por ejemplo, cálculos ilustrativos de
+impacto: p.ej., "Reducir scrap en 20,000 ton ahorra \$4M en costos, equivalente a X% del
+EBITDA", o "Mejorar OTIF en 10 puntos evita hasta \$600k en multas y \$500k en
+sobrecostos logísticos, liberando ese flujo", o "Invertir \$3M en eficiencial energética retorna
+en ~2 años con ahorros de \$1.8M anuales". La exactitud absoluta no es lo crítico, sino
+demostrar el razonamiento cuantitativo con base en cifras realistas.
+
+(Nota: Los datos anteriores están simplificados para efectos del caso. En una situación
+real, habría muchas más variables; aquí buscamos que concentre sus análisis en estos
+números clave.)
+
+
+         4. Entregable Requerido (Formato y Alcance)
+
+         Usted deberá preparar un único entregable consistente en una
+         presentación en formato PDF de máximo 8 diapositivas (slides). Este PDF
+         contendrá el desarrollo de su solución al caso, estructurado de forma
+         ejecutiva pero completa. En esencia, la presentación debe permitir a un
+         lector (el equipo evaluador de DeAcero) entender claramente: el análisis
+         que realizó, las opciones que evaluó y su propuesta final con sus
+         recomendaciones.
+
+         Requisitos del entregable:
+            ●​ Formato: PDF (presentación tipo PowerPoint o similar exportada).
+               Tamaño máximo 8 slides (sin contar portada/título y contraportada
+               simples, en caso de incluirlos).
+            ●​ Contenido mínimo: Su documento debe cubrir, como mínimo, los
+               siguientes aspectos:
+               - Introducción y contexto del problema: Un resumen del escenario de
+               negocio, KPIs actuales y objetivos (demuestre comprensión del
+               desafío).
+  - Supuestos clave de negocio: Mención de cualquier supuesto
+  adicional que haya considerado en su análisis.
+  - Análisis de datos y hallazgos relevantes: Por ejemplo, tendencias o
+  relaciones importantes que identifique de los datos proporcionados
+  (puede incluir gráficos simples si ayuda a ilustrar un punto, como la
+  magnitud de costos por scrap vs energía, etc.).
+
+
+●​ Tres estrategias propuestas: Presentación de las tres opciones
+   estratégicas (como se describió en 2.3), cada una con sus elementos
+   de descripción, impacto cuantitativo estimado, costo y riesgos. Puede
+   dedicar una diapositiva por estrategia, o combinarlas si logra
+   claridad, pero asegúrese de cubrir los cuatro elementos por cada
+   una.
+●​ Comparativa y decisión: Su evaluación de cuál estrategia
+   recomienda y por qué. Aquí debe verse claramente su criterio
+   estratégico: por ejemplo, puede hacer una tabla comparativa de
+   opciones vs KPIs vs costo, o un argumento narrativo sólido de por
+   qué la opción X es la óptima dado el contexto. Incluya
+   consideraciones de viabilidad (tal vez la estrategia Y aunque
+   prometedora no es viable en 12 meses, etc.).
+●​ Plan de alto nivel de implementación: Una vez elegida la estrategia
+   recomendada, describa brevemente cómo la implementaría. No se
+   espera un plan de proyecto detallado, pero sí los pasos o fases
+   principales (por ejemplo: Fase 1-piloto en una línea, Fase 2-
+   despliegue completo; o Paso 1 - integraciones de datos, Paso 2-
+   algoritmos, etc.), junto con un timeline estimado dentro del horizonte
+   de 12 meses, y roles responsables si aplica.
+●​ Consideraciones de Gobierno de Datos y Arquitectura: Dado que es
+   un rol CDO,
+●​ Consideraciones de Gobierno de Datos y Arquitectura: Dado que es un
+   rol CDO, demuestre que no solo piensa en la solución de negocio
+   inmediata sino en sustentabilidad de datos a largo plazo. Esto implica
+            mencionar cómo asegurará la calidad de datos, la gobernanza (por
+            ejemplo, quién será dueño de estos KPIs, cómo se mantendrán
+            definiciones consistentes) y cómo la estrategia encaja en una
+            arquitectura de datos corporativa más amplia. Inclúyalo en su
+            presentación (puede ser integrado en la diapositiva de plan o en una
+            sección separada breve).
+         ●​ Riesgos y mitigaciones: Destaque los principales riesgos del plan
+            recomendado (técnicos, operativos, financieros, etc., muchos de
+            ellos ya identificados en 2.3) y qué acciones sugiere para mitigarlos.
+         ●​ Conclusión: Cierre la presentación recapitulando su propuesta de valor -
+            cómo su plan logrará las mejoras de KPI y por qué DeAcero debería
+            implementarlo. Puede incluir aquí una visión a futuro, por ejemplo:
+            "Implementando esta estrategia, en 1 año esperamos lograr X,
+            sentando bases para Y a futuro...".
+         ●​ Estilo: La comunicación debe ser clara, concisa y profesional. Use
+            títulos descriptivos en cada diapositiva. Puede incluir viñetas, gráficos o
+            tablas de apoyo para datos cuantitativos (asegúrese que cualquier
+            número provisto pueda ser rastreado a los datos base o suposiciones
+            indicadas). Evite párrafos largos en las diapositivas; privilegie
+            esquemas, diagramas simples o bullet points con mensajes. clave.
+            Piense que este PDF podría ser presentado al CEO - debe ser directo al
+            punto y visualmente limpio, manteniendo el rigor técnico.
+         ●​ Lenguaje: Puede redactar su presentación en español o inglés,
+            preferentemente en español dado que la organización es
+            hispanoparlante. En cualquier caso, use lenguaje formal (evite jerga
+            excesivamente técnica sin explicación), y oriente el mensaje hacia la
+            acción y resultados de negocio.
+
+Notas adicionales: No se permite anexar documentos extra, spreadsheets u otro
+material; toda la información relevante debe estar contenida en las diapositivas (ya
+sea en el cuerpo principal o en notas al pie si es indispensable aclarar alguna
+suposición). Si requiere citar alguna fuente externa para sustentar mejores prácticas o
+benchmarks (opcionales), hágalo brevemente en texto (por ejemplo, "según estudio
+   X, las empresas que implementan loT reducen scrap 15% [3]"). En general, se evalúa
+   más su propio análisis que la investigación externa, pero puede apoyarse en
+   referencias siempre que sean pertinentes y breves.
+
+
+5. Instrucciones de Entrega
+
+Por favor siga las siguientes indicaciones para la entrega de su prueba técnica:
+
+            ●​ Plazo de entrega: Usted cuenta con 4 días calendario para completar el
+               ejercicio. Esto significa que, si estas instrucciones fueron recibidas, por
+               ejemplo, un lunes a las 9:00 a.m., deberá enviar su entregable antes del
+               viernes a las 9:00a.m. (hora local). La fecha y hora límite exacta de entrega
+               se le ha comunicado por correo electrónico junto con este documento. No
+               se otorgarán extensiones, salvo casos de fuerza mayor debidamente
+               justificados.
+            ●​ Formato y nombre de archivo: Entregue su documento en formato PDF. El
+               archivo debe nombrarse de la siguiente forma:
+               DeAcero_CDO_Test_[SuNombre].pdf (reemplazando [SuNombre] por su
+               nombre/apellido). Asegúrese de que el PDF sea legible y que no esté
+               protegido con contraseña ni otros obstáculos para su visualización.
+            ●​ Medio de entrega: Envíe el PDF vía correo electrónico respondiendo al hilo
+               donde recibió estas instrucciones, o súbalo a la plataforma indicada por el
+               equipo de reclutamiento de DeAcero. En el asunto del correo (si aplica)
+               mencione "Entrega Prueba CDO - [Su Nombre]". Verifique que recibe una
+               confirmación de recepción dentro de las siguientes horas; si no,
+               contacte al reclutador para garantizar que el archivo fue recibido
+               correctamente.
+            ●​ Presentación oral (si aplica): En esta etapa inicial no se le
+               solicita una presentación oral; sin embargo, es posible que
+               posteriormente se le invite a exponer su propuesta ante un
+               panel. Por ello, prepare su documento pensando en que podría
+               servirle de apoyo visual para una presentación de ~20 minutos.
+               En tal caso, se le avisará con anticipación para agendar la
+               reunión correspondiente.
+            ●​ Consultas durante el desarrollo: Si tiene dudas de interpretación sobre el
+               caso o necesita alguna aclaración sobre el alcance, puede enviar sus
+               preguntas al contacto designado (Juan Pérez, HR BP, email:
+               juan.perez@deacero.com) a más tardar dentro de los primeros 2 días.
+               Después de ese plazo no se garantiza responder a tiempo. Tenga en
+               cuenta que las respuestas podrían ser limitadas ya que parte de la
+               evaluación es cómo navega la ambigüedad con supuestos razonables.
+
+Asegúrese de verificar su documento antes de enviarlo: que esté completo, en el
+Asegúrese de verificar su documento antes de enviarlo: que esté completo, en el
+formato solicitado y que el contenido se visualice correctamente. No olvide incluir en la
+primera diapositiva su nombre completo y un título de su propuesta. Le recomendamos
+guardar una copia de respaldo de su envío.
+
+Cumplir con las instrucciones de entrega es parte de la evaluación (p.ej., un
+incumplimiento en formato o plazo podría descalificar la prueba). Si por alguna razón
+extraordinaria anticipa dificultades para la entrega, comuníquese lo antes posible con el
+equipo de reclutamiento.
+
+6. Criterios de Evaluación de la Prueba
+
+Su entrega será evaluada de manera integral considerando varios criterios clave,
+alineados con las competencias esperadas de un Chief Data Officer. A continuación se
+detallan las dimensiones de evaluación y el peso (importancia relativa) de cada una en
+la calificación total de la prueba:
+
+            ●​ Estrategia (30%) - Se valorará la claridad y solidez de la visión
+               estratégica demostrada. Esto incluye la comprensión del problema de
+               negocio, la calidad del análisis comparativo de las tres estrategias, la
+               lógica de la recomendación final y la alineación de la propuesta con los
+               objetivos de DeAcero. Una respuesta excelente en esta dimensión
+               presentará opciones bien definidas, con trade-offs claros, y argumentará
+   convincentemente por qué la estrategia elegida es la óptima en términos
+   de impacto y viabilidad.
+●​ Gobierno de Datos (20% ) - Corresponde a cómo incorpora
+   consideraciones de data governance en su propuesta. Un CDO debe
+   pensar en aseguramiento de la calidad de datos, definiciones consistentes
+   de KPIs, políticas de manejo de información, y sustentabilidad de las
+   soluciones de datos en el tiempo. Se evaluará si su plan contempla estos
+   aspectos (por ejemplo, mencionar creación de un data steward para los
+   datos de producción, planes de mejora de calidad de datos,
+   consideraciones de seguridad y privacidad donde aplique). No es
+   necesario explayarse extensamente, pero sí demostrar que las decisiones
+   tomadas reconocen la importancia de un gobierno adecuado de los datos.
+
+
+
+
+●​ Arquitectura & Tecnología de Datos (20% ) - Mide la comprensión y
+   propuestas en cuanto a la arquitectura de datos y soluciones tecnológicas.
+   Aquí se observará si identificó correctamente las necesidades tecnológicas
+   (p.ej., integración de sistemas, uso de plataformas analiticas, infraestructura
+   Big Data, herramientas de BI, IoT, etc.) y si sus recomendaciones tecnológicas
+   son coherentes con la estrategia. No buscamos marcas específicas de
+   software, sino la capacidad de proponer una arquitectura conceptual que
+   soporte la solución (por ejemplo, integrar fuentes diversas en un lago de
+   datos, o implementar módulos analiticos específicos). También se apreciará si
+   considera la escalabilidad y mantenimiento futuro de las tecnologías
+   sugeridas.
+●​ "Fire Drill" (15%) - Este criterio evalúa su capacidad de reacción y
+   pensamiento critico ante situaciones imprevistas. En el contexto de la prueba,
+   podría reflejarse en qué tanto consideró riesgos y contingencias (¿qué pasa si
+   algo no sale según lo planeado?), o si propuso métricas de monitoreo para
+   detectar desviaciones rápidamente. Adicionalmente, de pasar a una fase de
+   presentación oral, se podría simular un "fire drill" (ejemplo: una pregunta
+   sorpresa sobre un cambio drástico en el entorno) para medir cómo responde.
+             Para efectos del documento, asegúrese de incluir en su plan aspectos de
+             gestión de crisis o cómo ajustaría el rumbo anter eventos inesperados (por
+             ejemplo, "si la estrategia no muestra mejoras en 6 meses, haríamos X" o "ante
+             una falla de datos, tenemos plan B..."). Una excelente puntuación aquí
+             provendrá de demostrar anticipación y resiliencia en la planificación.
+          ●​ Comunicación (15% ) - Se centrará en la calidad de la comunicación escrita y
+             visual de su entregable. Un candidato a CDO debe comunicar ideas
+             complejas de forma accesible para ejecutivos y equipos técnicos por igual.
+             Se evaluará la estructura de la presentación (¿fluye lógicamente de
+             introducción a recomendación?), la claridad de los textos (¿evita jerga
+             innecesaria? ¿es concreto en los hallazgos?), el uso efectivo de apoyos
+             visuales (gráficos/tables bien etiquetados, diapositivas no sobrecargadas) y la
+             capacidad de síntesis. Asimismo, la adecuación al tiempo y formato es parte
+             de este criterio: cumplir con las 8 diapositivas, ni muy poco contenido
+             (superficial) ni excesivo (saturado). Un entregable sobresaliente tendrá un
+             estilo profesional, con mensajes clave destacados, y será fácil de seguir
+             incluso para alguien que no conozca el detalle técnico.
+
+
+Cada dimensión se calificará en una escala interna (por ejemplo, 1 a 5), que luego se
+ponderará por los porcentajes indicados. La nota final reflejará un balance de todas. La
+rúbrica completa de evaluación se resume a continuación:
+
+
+
+
+Tabla de Evaluación
+        Dimensión               Peso                    Qué se evalúa
+
+        Estrategia              30%                     Claridad del análisis
+                                                        estratégico, definición
+                                                        de opciones,
+                                                        recomendación y
+                                                      alineación con
+                                                      objetivos.
+
+       Gobierno de Datos       20%                    Consideración de
+                                                      calidad de datos,
+                                                      propiedad de datos,
+                                                      políticas y
+                                                      sustentabilidad de la
+                                                      solución.
+
+       Arquitectura & Tech     20%                    Solución tecnológica
+                                                      propuesta, integración
+                                                      de datos, adecuación
+                                                      de herramientas,
+                                                      escalabilidad.
+
+       Fire Drill (Agilidad)   15%                    Identificación de
+                                                      riesgos, planes de
+                                                      contingencia,
+                                                      capacidad de
+                                                      adaptación ante
+                                                      cambios inesperados.
+
+       Comunicación            15%                    Claridad y eficacia en
+                                                      la presentación
+                                                      escrita: estructura,
+                                                      visuales, concisión,
+                                                      impacto del mensaje.
+
+
+Un resultado exitoso será aquel en el que el candidato logra equilibrar todas estas
+dimensiones - por ejemplo, una estrategia brillante mal comunicada podría no obtener
+puntaje alto, o una presentación muy pulida pero sin sustancia estratégica tampoco.
+Buscamos un perfil equilibrado.
+ Retroalimentación: Tras la evaluación, independientemente del resultado, se le brindará
+ feedback estructurado de acuerdo a esta rúbrica, para su desarrollo profesional.
+
+
+7. Plantilla Sugerida para la Presentación (8 Diapositivas)
+
+Para apoyarlo en la estructuración de su PDF, a continuación se propone una plantilla de
+contenido para cada una de las hasta 8 diapositivas. No es obligatorio ceñirse
+exactamente a estos títulos, pero sí cubrir el contenido indicado en alguna parte de su
+documento. Puede fusionar o dividir elementos según le convenga, siempre que la lógica
+sea clara. Esta estructura recomendada es la siguiente:
+
+   1. Slide 1 - Portada: Título de la propuesta (por ej.: "Estrategia de Datos para
+      Optimización de Scrap, OTIF y Energía en DeAcero"), su nombre, y la fecha.
+      Incluya también una breve introducción de una frase si lo desea (por ejemplo:
+      "Propuesta estratégica por [Nombre], candidato CDO - Resumen Ejecutivo").
+   2. Slide 2-Contexto y Objetivos: Breve resumen del escenario actual de DeAcero y
+      los retos identificados. Mencione los tres KPIs (scrap, OTIF, energía) con sus
+      valores actuales y las metas definidas para cada uno. Deje claro el "qué" y "por
+      qué" del problema. Ejemplo de bullet points: "Scrap 5% (meta <3%) implicando
+      pérdida de \$10M/año", "OTIF 85% (meta 95%) afectando servicio al cliente y
+      causando multas", "Alto consumo energético (450 kWh/ton, meta -10%) con alto
+      costo \$36M/año". Esto demuestra que entendió el punto de partida.
+   3. Slide 3 - Análisis de la Situación (Insights de Datos): Destaque aquí cualquier
+      análisis cuantitativo o cualitativo que realizó con los datos base. Por ejemplo, un
+      gráfico simple comparando el impacto económico de cada problema (scrap vs
+      multas vs energía) para priorizar, o una breve análisis de "qué pasa si"
+      (sensibilidad). También puede señalar supuestos adicionales que hizo. La idea es
+      mostrar cómo razonó el problema con datos. Si no incluye un gráfico, use texto
+      para resaltar hallazgos (ej.: "El scrap constituye ~20% del costo variable total-
+      mayor prioridad de ahorro", "Mejorar OTIF incrementa satisfacción y evita hasta
+      1$1.5M en costos, pero impacto financiero inmediato menor que scrap", etc.).
+   4. Slide 4- Estrategia 1: (Nombre breve de la estrategia) - Describa la primera
+   estrategia. Sugerimos estructurar la diapositiva con 3 sub-bullets principales:
+   Descripción (¿en qué consiste esta estrategia, qué iniciativas incluye?), Impacto
+   esperado (¿cómo mejora scrap/OTIF/energía? cifras claves de beneficio) y
+   Inversión/Riesgos (¿cuánto cuesta aproximadamente, qué riesgos o limitantes
+   tiene?). Puede resaltar en negritas las cifras o puntos cruciales para que
+   destaquen. Asegúrese de ser concreto y no escribir párrafos largos; use palabras
+   clave.
+5. Slide 5- Estrategia 2: (Nombre breve) - Mismo formato que la anterior, aplicada a la
+segunda opción estratégica. Intente mantener cierto equilibrio en el nivel de detalle
+entre las tres para que la comparación sea justa. Emplee iconos o pequeñas.
+infografías si le ayudan, pero no sature; lo importante es el contenido.
+  6. Slide 6-Estrategia 3: (Nombre breve) - Mismo esquema para la
+  tercera estrategia. Al final de esta slide o en alguna nota, podría insinuar
+  cuál parece más prometedora si quiere preparar el terreno para la
+  siguiente slide, pero esto es opcional.
+ 7. Slide 7 - Comparación de Estrategias y Recomendación: Esta es crítica.
+ Aquí integre su análisis comparativo y exponga qué estrategia recomienda
+ implementar. Puede usar una pequeña tabla comparativa, por ejemplo, con
+ filas de "Cumplimiento de objetivo Scrap", "Cumplimiento OTIF", "Ahorro anual
+ estimado", "Costo implementación", "Riesgos", y columnas para Estrategia
+ 1/2/3- marcando con semáforos, check marks o valores concretos cada
+ aspecto. Visualmente esto ayuda mucho. Alternativamente, puede listar pros y
+ contras de cada opción, seguido de "Recomendación: Se elige la estrategia X
+ porque...". Al dar su recomendación, sea contundente: indique por qué sus
+ beneficios superan a las otras (o por qué es más viable dado restricciones).
+ También puede mencionar brevemente si alguna estrategia no elegida podría
+ ser un "Plan B" más adelante, mostrando pensamiento holístico.
+  8. Slide 8 - Plan de Implementación y Consideraciones Finales: Detalle, de forma
+  resumida, cómo ejecutaría la estrategia recomendada. Por ejemplo, una posible
+  sub-división: "Fases del Plan" (ej.: Mes 0-3 diseño, Mes 4-6 piloto, Mes 7-12
+        despliegue full), "Gobierno de Datos" (ej.: nombrar responsables de data,
+        asegurar calidad continua, etc.), y "Mitigación de Riesgos" (ej.: entrenamiento al
+        personal, plan de contingencia si hay retrasos, monitoreo de KPIs intermedios
+        mensuales para trackear progreso - este último refleja también el criterio "fire
+        drill" mostrando cómo reaccionaria si algo va off-track). Termine con una frase de
+        cierre potente, p. ej.: "Con esta hoja de ruta, en 12 meses DeAcero obtendrá
+        métricas de scrap, OTIF y energía significativamente mejoradas, cimentando
+        una cultura data-driven para el futuro."
+
+  Revisión final: asegúrese de que cada slide aporta al hilo narrativo y que no hay
+  repeticiones innecesarias. La transición entre slides debe ser lógica (el evaluador
+  debe poder seguir el cuento de principio a fin). Puede numerar las slides y usar el
+  logo de DeAcero en la portada si lo desea, aunque no es obligatorio en esta
+  prueba. En la plantilla anterior, cada slide cumple un propósito específico; siéntase
+  libre de adaptarla, pero cubra todos esos propósitos en algún lugar de su
+  presentación.
+
+
+[1] [2] Recicla Deacero 4.7 millones de toneladas de acero cada año - El Financiero
+
+https://www.elfinanciero.com.mx/monterrey/2024/07/16/recicla-deacero-47-millones-
+de-toneladas-de-acero-cada-ano/
+
+[3] [4] Manufacturing Scrap Solutions: How to Reduce Waste and Boost Efficiency | Okon
+Recycling
+https://www.okonrecycling.com/industrial-scrap-meta
+l-recycling/steel-and-aluminum/solutions-for-manufac
+turing-scrap/
+
+
+[5] 1
+
+https://www.fh-dortmund.de/medien/hochschule/i5_art18_gonzalez-olmos.pdf
+[6] [9] OTIF: Indicador clave esencial para ser competitivo - IDCOM
+
+https://idcom.us/es/otif-indicador-clave-esencial-para-ser-competitivo/
+
+[7] Maximizing On-Time In-Full (OTIF) In The Supply Chain | FourKites
+
+https://www.fourkites.com/blogs/maximizing-on-time-in-full-otif-in-the-supply-chain/
+
+[8] Steel Manufacturing Requires Efficient Electric Arc Furnaces | Advanced Energy
+
+https://www.advancedenergy.com/en-us/about/news/blog/steel-manufacturing-requires-
+ efficient-electric-arc-furnaces/
+Instrucciones de Prueba - Chief Data Officer (CDO) DeAcero (Parte Técnica)
+
+
+
+DeAcero - Predicción de Precios de Varilla
+
+1. Introducción y Contexto
+
+Como parte del proceso de selección para el puesto de Gerente de Data y Analítica Senior
+en DeAcero, debe desarrollar una solución técnica que demuestre sus habilidades en
+ingeniería de datos, modelado predictivo y despliegue de soluciones.
+
+DeAcero, como una de las siderúrgicas líderes en México, requiere capacidades predictivas
+para optimizar sus decisiones de compra de materia prima y estrategias de precio. El precio
+de la varilla corrugada es un indicador crítico que impacta directamente los márgenes
+operativos de la empresa.
+
+2. Objetivo de la Prueba
+
+Desarrollar y desplegar un API REST que prediga el precio de cierre del día siguiente para
+la varilla corrugada, utilizando datos históricos disponibles públicamente.
+3. Requerimientos Técnicos
+3.1 Endpoint Principal
+
+Debe exponer UN único endpoint público accesible por internet:
+
+GET /predict/steel-rebar-price
+
+Respuesta esperada (formato JSON):
+
+{
+    "prediction_date": "2025-01-XX",
+    "predicted price usd_per_ton": 750.45,
+     “currency": "USD",
+    "unit": "metric ton",
+    "model_confidence": 0.85,
+    "timestamp": "2025-01-XX T00:00:00Z"
+
+3.2 Fuentes de Datos Sugeridas (No Obligatorias)
+
+               ●​ London Metal Exchange (LME) - Precios de
+                  metales
+               ●​ Trading Economics - Indicadores de commodities
+               ●​ FRED (Federal Reserve Economic Data) - Series
+                  económicas
+               ●​ World Bank Commodity Price Data
+               ●​ Quandl/Nasdaq Data Link
+               ●​ Yahoo Finance (para proxies como futures de
+                  acero)
+
+Nota: Puede utilizar cualquier fuente de datos públicos que considere relevante. La calidad y
+relevancia de los datos seleccionados será parte de la evaluación.
+3.3 Restricciones y Consideraciones
+
+   1. Autenticación: El endpoint debe requerir un header de autorización:
+   2. X-API-Key: [valor_que_usted_defina]
+   3. Rate Limiting: Implemente un limite de 100 requests por hora por API key.
+   4. Cache: Las predicciones deben tener un cache de máximo 1 hora (para evitar recálculos
+        innecesarios).
+   5. Documentación Mínima: Incluya en la respuesta del endpoint raiz (GET) la siguiente
+        información:
+   {
+       "service": "Steel Rebar Price Predictor",
+    "version": "1.0",
+    "documentation url": "[URL a su documentación]",
+    "data sources": ["lista de fuentes utilizadas]",
+       "last model update": "timestamp"
+    }
+
+
+4. Criterios de Evaluación
+
+4.1 Evaluación Cuantitativa (60% del puntaje)
+
+               ●​ Se realizarán llamadas al API durante 5 días
+                  consecutivos
+               ●​ Se comparará la predicción con el precio real del día
+                  siguiente
+               ●​ Métrica: MAPE (Mean Absolute
+                  Percentage Error)
+               ●​ Criterio de eliminación: El 50% de candidatos con mayor error promedio
+                  quedarál excluido
+4.2 Evaluación Cualitativa (40% del puntaje)
+
+            ●​ Ingeniería de Features (15%): Creatividad y relevancia de las variables
+               utilizadas Robustez del Sistema (10%): Manejo de errores,
+               disponibilidad del servicio Calidad del Código (10%) : Estructura,
+               documentación, mejores prácticas Escalabilidad (5%): Diseño que
+               permita crecimiento futuro
+
+ 5. Entregables
+
+    1. URL del Endpoint: Dirección pública accesible del API
+    2. API Key: Para acceder al servicio
+    3. Repositorio de Código: Link a GitHub/GitLab con:
+            ●​ Código fuente
+            ●​ README con
+               instrucciones de
+               despliegue
+            ●​ Descripción del
+               modelo y
+               features
+               utilizados
+            ●​ Justificación de
+               decisiones
+               técnicas
+
+6. Consideraciones Adicionales (Opcionales pero Valoradas)
+
+            ●​ Monitoreo: Dashboard o métricas de performance del
+               modelo
+            ●​ A/B Testing: Capacidad de probar múltiples
+               modelos
+             ●​ Explicabilidad: Endpoint adicional que explique los factores que más influyen
+                en la predicción
+             ●​ Datos Complementarios: Uso de indicadores económicos, tipos de
+                cambio, indices industriales
+
+
+7. Restricciones y Lineamientos
+
+             ●​ Presupuesto Cloud: La solución debe poder operar con menos de $5
+                USD/mes
+             ●​ Lenguajes Permitidos: Python, R, Java, Node.js, Go
+             ●​ Tiempo de Respuesta: El endpoint debe responder en menos de 2
+                segundos
+             ●​ Sin Dependencias Comerciales: No utilizar APIs de pago o servicios que
+                requieran licencias
+
+8. Preguntas Frecuentes
+
+P: ¿Puedo usar modelos pre-entrenados? R: Si, pero debe documentar claramente qué
+utilizó y cómo lo adaptó al problema.
+
+P: ¿Qué pasa si no hay datos de precio para un día específico (fin de semana, feriados)?
+R: Su modelo debe manejar estos casos. Documente su estrategia.
+
+P: ¿Puedo incluir endpoints adicionales? R: Si, pero solo el endpoint principal será evaluado
+para la métrica de error.
+9. Plazo de Entrega
+
+             ●​ Fecha límite: 7 días calendario desde la recepción de estas
+                instrucciones
+             ●​ Inicio de evaluación: Al día siguiente de la entrega
+             ●​ Período de evaluación: 5 días
+                consecutivos
+
+
+ 10. Tips y Sugerencias (Sin dar la solución)
+
+             ●​ Considere que los precios de commodities tienen patrones estacionales
+                y tendencias
+             ●​ Los eventos geopolíticos pueden causar volatilidad considere incluir
+                algún indicador de incertidumbre
+             ●​ La varilla corrugada está correlacionada con el precio del mineral de
+                hierro y el carbón de coque
+             ●​ Los tipos de cambio pueden influir en los precios locales vs
+                internacionales
+             ●​ Un modelo simple bien implementado es mejor que uno complejo mal
+                ejecutado
+

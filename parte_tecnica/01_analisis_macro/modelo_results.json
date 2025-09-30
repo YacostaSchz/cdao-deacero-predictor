@@ -1,0 +1,22 @@
+{
+  "model_type": "VAR",
+  "coint_rank": 0,
+  "optimal_lags": "2",
+  "variables": [
+    "REBAR",
+    "IRON_ORE",
+    "CRUDE_BRENT",
+    "COAL_AUS"
+  ],
+  "mape": 0,
+  "rmse": 0,
+  "mae": 0,
+  "fevd_12m": {
+    "REBAR": 0.8970380236296878,
+    "IRON_ORE": 0.05771504609163011,
+    "CRUDE_BRENT": 0.016178098566841048,
+    "COAL_AUS": 0.029068831711841294
+  },
+  "train_period": "1979-01-01 00:00:00 to 2005-09-01 00:00:00",
+  "test_period": "2005-10-01 00:00:00 to 2012-06-01 00:00:00"
+}

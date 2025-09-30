@@ -1,0 +1,108 @@
+{
+	"info": {
+		"name": "Steel Price Predictor API",
+		"description": "API REST para predicción de precios de varilla corrugada - CDO DeAcero",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "test-api-key-12345-demo",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "X-API-Key",
+				"type": "string"
+			}
+		]
+	},
+	"item": [
+		{
+			"name": "Service Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://steel-predictor-190635835043.us-central1.run.app/",
+					"protocol": "https",
+					"host": ["steel-predictor-190635835043", "us-central1", "run", "app"],
+					"path": [""]
+				},
+				"description": "Get service information - No auth required"
+			},
+			"response": []
+		},
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://steel-predictor-190635835043.us-central1.run.app/health",
+					"protocol": "https",
+					"host": ["steel-predictor-190635835043", "us-central1", "run", "app"],
+					"path": ["health"]
+				},
+				"description": "Health check endpoint - No auth required"
+			},
+			"response": []
+		},
+		{
+			"name": "Predict Steel Price (Main)",
+			"request": {
+				"auth": {
+					"type": "inherit"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://steel-predictor-190635835043.us-central1.run.app/predict/steel-rebar-price",
+					"protocol": "https",
+					"host": ["steel-predictor-190635835043", "us-central1", "run", "app"],
+					"path": ["predict", "steel-rebar-price"]
+				},
+				"description": "Main prediction endpoint - Requires X-API-Key"
+			},
+			"response": []
+		},
+		{
+			"name": "Predict Steel Price (Extended)",
+			"request": {
+				"auth": {
+					"type": "inherit"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://steel-predictor-190635835043.us-central1.run.app/predict/steel-rebar-price/extended",
+					"protocol": "https",
+					"host": ["steel-predictor-190635835043", "us-central1", "run", "app"],
+					"path": ["predict", "steel-rebar-price", "extended"]
+				},
+				"description": "Extended prediction with wholesale/retail breakdown"
+			},
+			"response": []
+		},
+		{
+			"name": "Model Info",
+			"request": {
+				"auth": {
+					"type": "inherit"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://steel-predictor-190635835043.us-central1.run.app/model/info",
+					"protocol": "https",
+					"host": ["steel-predictor-190635835043", "us-central1", "run", "app"],
+					"path": ["model", "info"]
+				},
+				"description": "Get model metadata and performance metrics"
+			},
+			"response": []
+		}
+	]
+}

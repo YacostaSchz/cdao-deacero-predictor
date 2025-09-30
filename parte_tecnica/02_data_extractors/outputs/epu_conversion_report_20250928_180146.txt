@@ -1,0 +1,36 @@
+=== REPORTE DETALLADO DE CONVERSIÓN EPU ===
+Fecha: 2025-09-28 18:01:46.796222
+Archivos procesados: 4
+
+
+========================================
+Archivo: SCMP_China_Policy_Uncertainty_Data.xlsx
+País: china
+Filas: 348
+Columnas: 5
+Columnas: year, month, China News-Based EPU, fecha_procesamiento, archivo_origen
+Archivo de salida: epu_china_data.csv
+
+========================================
+Archivo: ECSU_Index.xls
+País: turkey
+Filas: 230
+Columnas: 6
+Columnas: Unnamed: 0, Unnamed: 1, Unnamed: 2, Please cite the data as follow: Kilic, I. and Balli, F. (2024). Measuring economic country-specific uncertainty in Türkiye. Empirical Economics, 67, pp.1649–1689. Available at: https://doi.org/10.1007/s00181-024-02594-z, fecha_procesamiento... (y 1 más)
+Archivo de salida: epu_turkey_data.csv
+
+========================================
+Archivo: US_Policy_Uncertainty_Data.xlsx
+País: usa
+Filas: 1509
+Columnas: 5
+Columnas: Year, Month, News_Based_Policy_Uncert_Index, fecha_procesamiento, archivo_origen
+Archivo de salida: epu_usa_data.csv
+
+========================================
+Archivo: Mexico_Policy_Uncertainty_Data.xlsx
+País: mexico
+Filas: 357
+Columnas: 5
+Columnas: Year, Month, Mexican Policy Uncertainty Index, fecha_procesamiento, archivo_origen
+Archivo de salida: epu_mexico_data.csv

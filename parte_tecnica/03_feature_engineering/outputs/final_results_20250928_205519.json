@@ -1,0 +1,36 @@
+{
+  "timestamp": "2025-09-28T20:55:19.560320",
+  "model_performance": {
+    "baseline": {
+      "val_mape": 0.01727166724107259,
+      "val_rmse": 14.634775767268811
+    },
+    "random_forest": {
+      "val_mape": 0.010453337137797128,
+      "val_rmse": 9.916065538342052
+    }
+  },
+  "feature_importance": {
+    "lme_sr_m01_lag1": 0.9936158876009303,
+    "usdmxn_lag1": 0.00045952206371592736,
+    "mexico_premium": 0.0,
+    "lme_volatility_5d": 0.000611157646275184,
+    "lme_momentum_5d": 0.00019948725008386105,
+    "contango_indicator": 4.563629065202629e-05,
+    "rebar_scrap_spread_norm": 0.002002909054457034,
+    "trade_events_impact_7d": 0.0,
+    "weekday_effect": 3.8225434428013054e-05,
+    "seasonality_simple": 8.725902458938986e-05,
+    "real_interest_rate": 0.001601828189319272,
+    "uncertainty_indicator": 0.0,
+    "market_regime": 6.112955238174922e-05,
+    "days_to_holiday": 0.0011872026385310048,
+    "model_confidence": 8.975525463617248e-05
+  },
+  "data_info": {
+    "train_records": 2583,
+    "val_records": 970,
+    "train_period": "2015-11-22 00:00:00 to 2022-12-31 00:00:00",
+    "val_period": "2023-01-01 00:00:00 to 2025-08-31 00:00:00"
+  }
+}

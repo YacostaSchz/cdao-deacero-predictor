@@ -1,0 +1,26 @@
+{
+  "predicted_price_usd_per_ton": 938.27,
+  "predicted_price_mxn_per_ton": 17827.18,
+  "confidence": "Medium",
+  "prediction_intervals": {
+    "usd_90%": [
+      886.25,
+      990.3
+    ],
+    "mxn_90%": [
+      16838.72,
+      18815.65
+    ]
+  },
+  "components": {
+    "lme_forecast_usd": 554.63,
+    "premium_applied": 1.6917,
+    "fx_rate_used": 19.0
+  },
+  "metadata": {
+    "model_version": "final-consolidated",
+    "data_points_used": 7,
+    "market_segment": "menudeo",
+    "timestamp": "2025-09-28T21:50:24.438943"
+  }
+}

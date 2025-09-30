@@ -1,0 +1,1263 @@
+[
+  {
+    "source_name": "BANXICO_USD_MXN",
+    "file_path": "SF43718_data.csv",
+    "date_range": {
+      "min": "SF43718",
+      "max": "SF43718"
+    },
+    "frequency": {
+      "frequency_class": "daily",
+      "delta_median_days": 1.0,
+      "delta_stats": {
+        "min_days": 1.0,
+        "median_days": 1.0,
+        "max_days": 5.0,
+        "std_days": 0.8736086239497017,
+        "mode_days": 1.0
+      },
+      "release_lag_median_days": 0,
+      "timezone": "America/Mexico_City"
+    },
+    "data_quality": {
+      "source": "BANXICO_USD_MXN",
+      "total_records": 437,
+      "date_range": {
+        "min": "SF43718",
+        "max": "SF43718"
+      },
+      "missing_pct_by_col": {
+        "serie_id": 0.0,
+        "fecha": 0.0,
+        "valor": 0.0,
+        "fecha_descarga": 0.0
+      },
+      "duplicates": {
+        "exact": 0
+      },
+      "outliers": {
+        "valor": 0
+      }
+    },
+    "imputation_policy": {
+      "method": "LOCF",
+      "max_carry_days": 3
+    },
+    "anti_leakage": {
+      "cutoff_time_tz": "23:59:59 America/Mexico_City",
+      "available_at_rule": "primary_time + 0 days"
+    },
+    "features": [
+      {
+        "name": "valor_t0",
+        "uses_data_at": "t-0",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "same_day_close"
+      },
+      {
+        "name": "valor_lag1",
+        "uses_data_at": "t-1",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-1"
+      },
+      {
+        "name": "valor_lag5",
+        "uses_data_at": "t-5",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-5"
+      },
+      {
+        "name": "valor_lag20",
+        "uses_data_at": "t-20",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-20"
+      },
+      {
+        "name": "valor_pct_change_5d",
+        "uses_data_at": "t-1",
+        "transform": "pct_change_5",
+        "window": 5,
+        "availability_rule": "requires_t-1_to_t-window"
+      },
+      {
+        "name": "valor_pct_change_20d",
+        "uses_data_at": "t-1",
+        "transform": "pct_change_20",
+        "window": 20,
+        "availability_rule": "requires_t-1_to_t-window"
+      },
+      {
+        "name": "valor_ma20",
+        "uses_data_at": "t-1",
+        "transform": "rolling_mean",
+        "window": 20,
+        "availability_rule": "uses_t-1_to_t-20"
+      }
+    ],
+    "units": "MXN/USD",
+    "sample_preview": [
+      {
+        "serie_id": "SF43718",
+        "fecha": "2024-01-02 00:00:00",
+        "valor": 17.0297,
+        "fecha_descarga": "2025-09-28 17:48:52.355628"
+      },
+      {
+        "serie_id": "SF43718",
+        "fecha": "2024-01-03 00:00:00",
+        "valor": 17.0492,
+        "fecha_descarga": "2025-09-28 17:48:52.355628"
+      },
+      {
+        "serie_id": "SF43718",
+        "fecha": "2024-01-04 00:00:00",
+        "valor": 17.0458,
+        "fecha_descarga": "2025-09-28 17:48:52.355628"
+      },
+      {
+        "serie_id": "SF43718",
+        "fecha": "2024-01-05 00:00:00",
+        "valor": 16.8987,
+        "fecha_descarga": "2025-09-28 17:48:52.355628"
+      },
+      {
+        "serie_id": "SF43718",
+        "fecha": "2024-01-08 00:00:00",
+        "valor": 16.8133,
+        "fecha_descarga": "2025-09-28 17:48:52.355628"
+      },
+      {
+        "serie_id": "SF43718",
+        "fecha": "2024-01-09 00:00:00",
+        "valor": 16.9347,
+        "fecha_descarga": "2025-09-28 17:48:52.355628"
+      },
+      {
+        "serie_id": "SF43718",
+        "fecha": "2024-01-10 00:00:00",
+        "valor": 16.9912,
+        "fecha_descarga": "2025-09-28 17:48:52.355628"
+      },
+      {
+        "serie_id": "SF43718",
+        "fecha": "2024-01-11 00:00:00",
+        "valor": 16.9898,
+        "fecha_descarga": "2025-09-28 17:48:52.355628"
+      },
+      {
+        "serie_id": "SF43718",
+        "fecha": "2024-01-12 00:00:00",
+        "valor": 16.858,
+        "fecha_descarga": "2025-09-28 17:48:52.355628"
+      },
+      {
+        "serie_id": "SF43718",
+        "fecha": "2024-01-15 00:00:00",
+        "valor": 16.8983,
+        "fecha_descarga": "2025-09-28 17:48:52.355628"
+      }
+    ]
+  },
+  {
+    "source_name": "BANXICO_INPC",
+    "file_path": "SP1_data.csv",
+    "date_range": {
+      "min": "SP1",
+      "max": "SP1"
+    },
+    "frequency": {
+      "frequency_class": "monthly",
+      "delta_median_days": 31.0,
+      "delta_stats": {
+        "min_days": 28.0,
+        "median_days": 31.0,
+        "max_days": 31.0,
+        "std_days": 0.837707816583391,
+        "mode_days": 31.0
+      },
+      "release_lag_median_days": 10,
+      "timezone": "America/Mexico_City"
+    },
+    "data_quality": {
+      "source": "BANXICO_INPC",
+      "total_records": 20,
+      "date_range": {
+        "min": "SP1",
+        "max": "SP1"
+      },
+      "missing_pct_by_col": {
+        "serie_id": 0.0,
+        "fecha": 0.0,
+        "valor": 0.0,
+        "fecha_descarga": 0.0
+      },
+      "duplicates": {
+        "exact": 0
+      },
+      "outliers": {
+        "valor": 0
+      }
+    },
+    "imputation_policy": {
+      "method": "LOCF",
+      "max_carry_days": 31
+    },
+    "anti_leakage": {
+      "cutoff_time_tz": "23:59:59 America/Mexico_City",
+      "available_at_rule": "primary_time + 10 days"
+    },
+    "features": [
+      {
+        "name": "valor_last_published",
+        "uses_data_at": "t-10",
+        "transform": "as_of_join",
+        "window": 1,
+        "availability_rule": "last_value_published_before_t-10"
+      },
+      {
+        "name": "valor_mom_pct",
+        "uses_data_at": "t-1m",
+        "transform": "month_over_month_pct",
+        "window": 1,
+        "availability_rule": "requires_two_published_months"
+      },
+      {
+        "name": "valor_qoq_pct",
+        "uses_data_at": "t-3m",
+        "transform": "quarter_over_quarter_pct",
+        "window": 3,
+        "availability_rule": "requires_t-1m_and_t-4m_published"
+      }
+    ],
+    "units": "Index",
+    "sample_preview": [
+      {
+        "serie_id": "SP1",
+        "fecha": "2024-01-01 00:00:00",
+        "valor": 133.555,
+        "fecha_descarga": "2025-09-28 17:48:54.184057"
+      },
+      {
+        "serie_id": "SP1",
+        "fecha": "2024-02-01 00:00:00",
+        "valor": 133.681,
+        "fecha_descarga": "2025-09-28 17:48:54.184057"
+      },
+      {
+        "serie_id": "SP1",
+        "fecha": "2024-03-01 00:00:00",
+        "valor": 134.065,
+        "fecha_descarga": "2025-09-28 17:48:54.184057"
+      },
+      {
+        "serie_id": "SP1",
+        "fecha": "2024-04-01 00:00:00",
+        "valor": 134.336,
+        "fecha_descarga": "2025-09-28 17:48:54.184057"
+      },
+      {
+        "serie_id": "SP1",
+        "fecha": "2024-05-01 00:00:00",
+        "valor": 134.087,
+        "fecha_descarga": "2025-09-28 17:48:54.184057"
+      },
+      {
+        "serie_id": "SP1",
+        "fecha": "2024-06-01 00:00:00",
+        "valor": 134.594,
+        "fecha_descarga": "2025-09-28 17:48:54.184057"
+      },
+      {
+        "serie_id": "SP1",
+        "fecha": "2024-07-01 00:00:00",
+        "valor": 136.003,
+        "fecha_descarga": "2025-09-28 17:48:54.184057"
+      },
+      {
+        "serie_id": "SP1",
+        "fecha": "2024-08-01 00:00:00",
+        "valor": 136.013,
+        "fecha_descarga": "2025-09-28 17:48:54.184057"
+      },
+      {
+        "serie_id": "SP1",
+        "fecha": "2024-09-01 00:00:00",
+        "valor": 136.08,
+        "fecha_descarga": "2025-09-28 17:48:54.184057"
+      },
+      {
+        "serie_id": "SP1",
+        "fecha": "2024-10-01 00:00:00",
+        "valor": 136.828,
+        "fecha_descarga": "2025-09-28 17:48:54.184057"
+      }
+    ]
+  },
+  {
+    "source_name": "BANXICO_TIIE28",
+    "file_path": "SF43783_data.csv",
+    "date_range": {
+      "min": "SF43783",
+      "max": "SF43783"
+    },
+    "frequency": {
+      "frequency_class": "daily",
+      "delta_median_days": 1.0,
+      "delta_stats": {
+        "min_days": 1.0,
+        "median_days": 1.0,
+        "max_days": 5.0,
+        "std_days": 0.8736086239497017,
+        "mode_days": 1.0
+      },
+      "release_lag_median_days": 0,
+      "timezone": "America/Mexico_City"
+    },
+    "data_quality": {
+      "source": "BANXICO_TIIE28",
+      "total_records": 437,
+      "date_range": {
+        "min": "SF43783",
+        "max": "SF43783"
+      },
+      "missing_pct_by_col": {
+        "serie_id": 0.0,
+        "fecha": 0.0,
+        "valor": 0.0,
+        "fecha_descarga": 0.0
+      },
+      "duplicates": {
+        "exact": 0
+      },
+      "outliers": {
+        "valor": 0
+      }
+    },
+    "imputation_policy": {
+      "method": "LOCF",
+      "max_carry_days": 3
+    },
+    "anti_leakage": {
+      "cutoff_time_tz": "23:59:59 America/Mexico_City",
+      "available_at_rule": "primary_time + 0 days"
+    },
+    "features": [
+      {
+        "name": "valor_t0",
+        "uses_data_at": "t-0",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "same_day_close"
+      },
+      {
+        "name": "valor_lag1",
+        "uses_data_at": "t-1",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-1"
+      },
+      {
+        "name": "valor_lag5",
+        "uses_data_at": "t-5",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-5"
+      },
+      {
+        "name": "valor_lag20",
+        "uses_data_at": "t-20",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-20"
+      },
+      {
+        "name": "valor_pct_change_5d",
+        "uses_data_at": "t-1",
+        "transform": "pct_change_5",
+        "window": 5,
+        "availability_rule": "requires_t-1_to_t-window"
+      },
+      {
+        "name": "valor_pct_change_20d",
+        "uses_data_at": "t-1",
+        "transform": "pct_change_20",
+        "window": 20,
+        "availability_rule": "requires_t-1_to_t-window"
+      },
+      {
+        "name": "valor_ma20",
+        "uses_data_at": "t-1",
+        "transform": "rolling_mean",
+        "window": 20,
+        "availability_rule": "uses_t-1_to_t-20"
+      }
+    ],
+    "units": "Percent",
+    "sample_preview": [
+      {
+        "serie_id": "SF43783",
+        "fecha": "2024-01-02 00:00:00",
+        "valor": 11.5025,
+        "fecha_descarga": "2025-09-28 17:48:55.989094"
+      },
+      {
+        "serie_id": "SF43783",
+        "fecha": "2024-01-03 00:00:00",
+        "valor": 11.5022,
+        "fecha_descarga": "2025-09-28 17:48:55.989094"
+      },
+      {
+        "serie_id": "SF43783",
+        "fecha": "2024-01-04 00:00:00",
+        "valor": 11.5025,
+        "fecha_descarga": "2025-09-28 17:48:55.989094"
+      },
+      {
+        "serie_id": "SF43783",
+        "fecha": "2024-01-05 00:00:00",
+        "valor": 11.5025,
+        "fecha_descarga": "2025-09-28 17:48:55.989094"
+      },
+      {
+        "serie_id": "SF43783",
+        "fecha": "2024-01-08 00:00:00",
+        "valor": 11.5025,
+        "fecha_descarga": "2025-09-28 17:48:55.989094"
+      },
+      {
+        "serie_id": "SF43783",
+        "fecha": "2024-01-09 00:00:00",
+        "valor": 11.5025,
+        "fecha_descarga": "2025-09-28 17:48:55.989094"
+      },
+      {
+        "serie_id": "SF43783",
+        "fecha": "2024-01-10 00:00:00",
+        "valor": 11.5025,
+        "fecha_descarga": "2025-09-28 17:48:55.989094"
+      },
+      {
+        "serie_id": "SF43783",
+        "fecha": "2024-01-11 00:00:00",
+        "valor": 11.5025,
+        "fecha_descarga": "2025-09-28 17:48:55.989094"
+      },
+      {
+        "serie_id": "SF43783",
+        "fecha": "2024-01-12 00:00:00",
+        "valor": 11.5025,
+        "fecha_descarga": "2025-09-28 17:48:55.989094"
+      },
+      {
+        "serie_id": "SF43783",
+        "fecha": "2024-01-15 00:00:00",
+        "valor": 11.4975,
+        "fecha_descarga": "2025-09-28 17:48:55.989094"
+      }
+    ]
+  },
+  {
+    "source_name": "LME_STEEL_REBAR",
+    "file_path": "lme_sr_wide.csv",
+    "date_range": {
+      "min": "2024-01-02 00:00:00",
+      "max": "2025-08-29 00:00:00"
+    },
+    "frequency": {
+      "frequency_class": "daily",
+      "delta_median_days": 1.0,
+      "delta_stats": {
+        "min_days": 1.0,
+        "median_days": 1.0,
+        "max_days": 5.0,
+        "std_days": 0.8759746086188115,
+        "mode_days": 1.0
+      },
+      "release_lag_median_days": 0,
+      "timezone": "America/Mexico_City"
+    },
+    "data_quality": {
+      "source": "LME_STEEL_REBAR",
+      "total_records": 421,
+      "date_range": {
+        "min": "2024-01-02 00:00:00",
+        "max": "2025-08-29 00:00:00"
+      },
+      "missing_pct_by_col": {
+        "date": 0.0,
+        "M01": 0.0,
+        "M02": 0.0,
+        "M03": 0.0,
+        "M04": 0.0,
+        "M05": 0.0,
+        "M06": 0.0,
+        "M07": 0.0,
+        "M08": 0.0,
+        "M09": 0.0,
+        "M10": 0.0,
+        "M11": 0.0,
+        "M12": 0.0,
+        "M13": 0.0,
+        "M14": 0.0,
+        "M15": 0.0,
+        "commodity": 0.0,
+        "year": 0.0,
+        "month": 0.0,
+        "fecha_procesamiento": 0.0,
+        "front_month": 0.0,
+        "back_month": 0.0,
+        "contango_3m": 0.0,
+        "contango_6m": 0.0,
+        "spread_m1_m2": 0.0,
+        "spread_m1_m3": 0.0
+      },
+      "duplicates": {
+        "exact": 0
+      },
+      "outliers": {
+        "M01": 2,
+        "M02": 2,
+        "M03": 0,
+        "M04": 6,
+        "M05": 10,
+        "M06": 8,
+        "M07": 2,
+        "M08": 4,
+        "M09": 3,
+        "M10": 2,
+        "M11": 4,
+        "M12": 4,
+        "M13": 4,
+        "M14": 4,
+        "M15": 4,
+        "year": 0,
+        "month": 0,
+        "front_month": 2,
+        "back_month": 0,
+        "contango_3m": 10,
+        "contango_6m": 11,
+        "spread_m1_m2": 25,
+        "spread_m1_m3": 10
+      }
+    },
+    "imputation_policy": {
+      "method": "LOCF",
+      "max_carry_days": 3
+    },
+    "anti_leakage": {
+      "cutoff_time_tz": "23:59:59 America/Mexico_City",
+      "available_at_rule": "primary_time + 0 days"
+    },
+    "features": [
+      {
+        "name": "M01_t0",
+        "uses_data_at": "t-0",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "same_day_close"
+      },
+      {
+        "name": "M01_lag1",
+        "uses_data_at": "t-1",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-1"
+      },
+      {
+        "name": "M01_lag5",
+        "uses_data_at": "t-5",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-5"
+      },
+      {
+        "name": "M01_lag20",
+        "uses_data_at": "t-20",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-20"
+      },
+      {
+        "name": "M01_pct_change_5d",
+        "uses_data_at": "t-1",
+        "transform": "pct_change_5",
+        "window": 5,
+        "availability_rule": "requires_t-1_to_t-window"
+      },
+      {
+        "name": "M01_pct_change_20d",
+        "uses_data_at": "t-1",
+        "transform": "pct_change_20",
+        "window": 20,
+        "availability_rule": "requires_t-1_to_t-window"
+      },
+      {
+        "name": "M01_ma20",
+        "uses_data_at": "t-1",
+        "transform": "rolling_mean",
+        "window": 20,
+        "availability_rule": "uses_t-1_to_t-20"
+      },
+      {
+        "name": "M02_t0",
+        "uses_data_at": "t-0",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "same_day_close"
+      },
+      {
+        "name": "M02_lag1",
+        "uses_data_at": "t-1",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-1"
+      },
+      {
+        "name": "M02_lag5",
+        "uses_data_at": "t-5",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-5"
+      },
+      {
+        "name": "M02_lag20",
+        "uses_data_at": "t-20",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-20"
+      },
+      {
+        "name": "M02_pct_change_5d",
+        "uses_data_at": "t-1",
+        "transform": "pct_change_5",
+        "window": 5,
+        "availability_rule": "requires_t-1_to_t-window"
+      },
+      {
+        "name": "M02_pct_change_20d",
+        "uses_data_at": "t-1",
+        "transform": "pct_change_20",
+        "window": 20,
+        "availability_rule": "requires_t-1_to_t-window"
+      },
+      {
+        "name": "M02_ma20",
+        "uses_data_at": "t-1",
+        "transform": "rolling_mean",
+        "window": 20,
+        "availability_rule": "uses_t-1_to_t-20"
+      },
+      {
+        "name": "M03_t0",
+        "uses_data_at": "t-0",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "same_day_close"
+      },
+      {
+        "name": "M03_lag1",
+        "uses_data_at": "t-1",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-1"
+      },
+      {
+        "name": "M03_lag5",
+        "uses_data_at": "t-5",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-5"
+      },
+      {
+        "name": "M03_lag20",
+        "uses_data_at": "t-20",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-20"
+      },
+      {
+        "name": "M03_pct_change_5d",
+        "uses_data_at": "t-1",
+        "transform": "pct_change_5",
+        "window": 5,
+        "availability_rule": "requires_t-1_to_t-window"
+      },
+      {
+        "name": "M03_pct_change_20d",
+        "uses_data_at": "t-1",
+        "transform": "pct_change_20",
+        "window": 20,
+        "availability_rule": "requires_t-1_to_t-window"
+      },
+      {
+        "name": "M03_ma20",
+        "uses_data_at": "t-1",
+        "transform": "rolling_mean",
+        "window": 20,
+        "availability_rule": "uses_t-1_to_t-20"
+      }
+    ],
+    "units": "USD/ton",
+    "sample_preview": [
+      {
+        "date": "2024-01-02 00:00:00",
+        "M01": 597.5,
+        "M02": 602.0,
+        "M03": 602.0,
+        "M04": 605.0,
+        "M05": 607.5,
+        "M06": 606.5,
+        "M07": 608.0,
+        "M08": 608.5,
+        "M09": 610.0,
+        "M10": 610.5,
+        "M11": 611.5,
+        "M12": 612.5,
+        "M13": 612.5,
+        "M14": 612.5,
+        "M15": 612.5,
+        "commodity": "SR",
+        "year": 2024,
+        "month": 1,
+        "fecha_procesamiento": "2025-09-28 18:14:15.994359",
+        "front_month": 597.5,
+        "back_month": 602.0,
+        "contango_3m": 0.75,
+        "contango_6m": 1.51,
+        "spread_m1_m2": 4.5,
+        "spread_m1_m3": 4.5
+      },
+      {
+        "date": "2024-01-03 00:00:00",
+        "M01": 595.0,
+        "M02": 600.5,
+        "M03": 601.5,
+        "M04": 601.5,
+        "M05": 602.5,
+        "M06": 603.5,
+        "M07": 606.5,
+        "M08": 608.5,
+        "M09": 610.5,
+        "M10": 610.5,
+        "M11": 611.5,
+        "M12": 612.5,
+        "M13": 612.5,
+        "M14": 607.0,
+        "M15": 607.0,
+        "commodity": "SR",
+        "year": 2024,
+        "month": 1,
+        "fecha_procesamiento": "2025-09-28 18:14:15.994359",
+        "front_month": 595.0,
+        "back_month": 601.5,
+        "contango_3m": 1.09,
+        "contango_6m": 1.43,
+        "spread_m1_m2": 5.5,
+        "spread_m1_m3": 6.5
+      },
+      {
+        "date": "2024-01-04 00:00:00",
+        "M01": 596.0,
+        "M02": 596.5,
+        "M03": 598.0,
+        "M04": 601.5,
+        "M05": 602.0,
+        "M06": 604.0,
+        "M07": 607.0,
+        "M08": 608.5,
+        "M09": 610.5,
+        "M10": 610.5,
+        "M11": 612.0,
+        "M12": 613.0,
+        "M13": 612.5,
+        "M14": 607.0,
+        "M15": 607.0,
+        "commodity": "SR",
+        "year": 2024,
+        "month": 1,
+        "fecha_procesamiento": "2025-09-28 18:14:15.994359",
+        "front_month": 596.0,
+        "back_month": 598.0,
+        "contango_3m": 0.34,
+        "contango_6m": 1.34,
+        "spread_m1_m2": 0.5,
+        "spread_m1_m3": 2.0
+      },
+      {
+        "date": "2024-01-05 00:00:00",
+        "M01": 594.5,
+        "M02": 595.0,
+        "M03": 598.0,
+        "M04": 600.5,
+        "M05": 602.0,
+        "M06": 600.0,
+        "M07": 605.0,
+        "M08": 608.0,
+        "M09": 608.0,
+        "M10": 608.0,
+        "M11": 608.5,
+        "M12": 611.5,
+        "M13": 608.0,
+        "M14": 608.0,
+        "M15": 608.0,
+        "commodity": "SR",
+        "year": 2024,
+        "month": 1,
+        "fecha_procesamiento": "2025-09-28 18:14:15.994359",
+        "front_month": 594.5,
+        "back_month": 598.0,
+        "contango_3m": 0.59,
+        "contango_6m": 0.93,
+        "spread_m1_m2": 0.5,
+        "spread_m1_m3": 3.5
+      },
+      {
+        "date": "2024-01-08 00:00:00",
+        "M01": 602.0,
+        "M02": 603.0,
+        "M03": 604.5,
+        "M04": 605.0,
+        "M05": 605.0,
+        "M06": 607.0,
+        "M07": 605.5,
+        "M08": 606.0,
+        "M09": 605.0,
+        "M10": 605.0,
+        "M11": 605.0,
+        "M12": 605.0,
+        "M13": 605.0,
+        "M14": 605.0,
+        "M15": 605.0,
+        "commodity": "SR",
+        "year": 2024,
+        "month": 1,
+        "fecha_procesamiento": "2025-09-28 18:14:15.994359",
+        "front_month": 602.0,
+        "back_month": 604.5,
+        "contango_3m": 0.42,
+        "contango_6m": 0.83,
+        "spread_m1_m2": 1.0,
+        "spread_m1_m3": 2.5
+      },
+      {
+        "date": "2024-01-09 00:00:00",
+        "M01": 600.0,
+        "M02": 599.29,
+        "M03": 603.0,
+        "M04": 603.0,
+        "M05": 604.5,
+        "M06": 603.5,
+        "M07": 604.5,
+        "M08": 604.5,
+        "M09": 605.0,
+        "M10": 605.5,
+        "M11": 605.5,
+        "M12": 604.5,
+        "M13": 604.5,
+        "M14": 604.5,
+        "M15": 604.5,
+        "commodity": "SR",
+        "year": 2024,
+        "month": 1,
+        "fecha_procesamiento": "2025-09-28 18:14:15.994359",
+        "front_month": 600.0,
+        "back_month": 603.0,
+        "contango_3m": 0.5,
+        "contango_6m": 0.58,
+        "spread_m1_m2": -0.7100000000000364,
+        "spread_m1_m3": 3.0
+      },
+      {
+        "date": "2024-01-10 00:00:00",
+        "M01": 599.0,
+        "M02": 599.5,
+        "M03": 598.0,
+        "M04": 599.0,
+        "M05": 601.0,
+        "M06": 602.5,
+        "M07": 601.5,
+        "M08": 604.0,
+        "M09": 605.0,
+        "M10": 605.5,
+        "M11": 605.5,
+        "M12": 604.5,
+        "M13": 604.5,
+        "M14": 604.5,
+        "M15": 604.5,
+        "commodity": "SR",
+        "year": 2024,
+        "month": 1,
+        "fecha_procesamiento": "2025-09-28 18:14:15.994359",
+        "front_month": 599.0,
+        "back_month": 598.0,
+        "contango_3m": -0.17,
+        "contango_6m": 0.58,
+        "spread_m1_m2": 0.5,
+        "spread_m1_m3": -1.0
+      },
+      {
+        "date": "2024-01-11 00:00:00",
+        "M01": 602.5,
+        "M02": 600.0,
+        "M03": 601.0,
+        "M04": 601.5,
+        "M05": 603.0,
+        "M06": 604.0,
+        "M07": 601.5,
+        "M08": 603.5,
+        "M09": 604.5,
+        "M10": 605.0,
+        "M11": 605.0,
+        "M12": 604.5,
+        "M13": 604.5,
+        "M14": 604.5,
+        "M15": 604.5,
+        "commodity": "SR",
+        "year": 2024,
+        "month": 1,
+        "fecha_procesamiento": "2025-09-28 18:14:15.994359",
+        "front_month": 602.5,
+        "back_month": 601.0,
+        "contango_3m": -0.25,
+        "contango_6m": 0.25,
+        "spread_m1_m2": -2.5,
+        "spread_m1_m3": -1.5
+      },
+      {
+        "date": "2024-01-12 00:00:00",
+        "M01": 598.0,
+        "M02": 592.0,
+        "M03": 590.0,
+        "M04": 593.0,
+        "M05": 595.0,
+        "M06": 595.0,
+        "M07": 595.0,
+        "M08": 601.5,
+        "M09": 602.5,
+        "M10": 603.0,
+        "M11": 603.0,
+        "M12": 603.0,
+        "M13": 603.0,
+        "M14": 603.0,
+        "M15": 603.0,
+        "commodity": "SR",
+        "year": 2024,
+        "month": 1,
+        "fecha_procesamiento": "2025-09-28 18:14:15.994359",
+        "front_month": 598.0,
+        "back_month": 590.0,
+        "contango_3m": -1.34,
+        "contango_6m": -0.5,
+        "spread_m1_m2": -6.0,
+        "spread_m1_m3": -8.0
+      },
+      {
+        "date": "2024-01-15 00:00:00",
+        "M01": 601.0,
+        "M02": 596.5,
+        "M03": 595.0,
+        "M04": 597.5,
+        "M05": 597.0,
+        "M06": 599.5,
+        "M07": 598.0,
+        "M08": 599.0,
+        "M09": 600.0,
+        "M10": 602.0,
+        "M11": 602.0,
+        "M12": 606.0,
+        "M13": 606.0,
+        "M14": 606.0,
+        "M15": 606.0,
+        "commodity": "SR",
+        "year": 2024,
+        "month": 1,
+        "fecha_procesamiento": "2025-09-28 18:14:15.994359",
+        "front_month": 601.0,
+        "back_month": 595.0,
+        "contango_3m": -1.0,
+        "contango_6m": -0.25,
+        "spread_m1_m2": -4.5,
+        "spread_m1_m3": -6.0
+      }
+    ]
+  },
+  {
+    "source_name": "LME_COMBINED",
+    "file_path": "lme_combined_sr_sc.csv",
+    "date_range": {
+      "min": "2024-01-02 00:00:00",
+      "max": "2025-08-29 00:00:00"
+    },
+    "frequency": {
+      "frequency_class": "daily",
+      "delta_median_days": 1.0,
+      "delta_stats": {
+        "min_days": 1.0,
+        "median_days": 1.0,
+        "max_days": 5.0,
+        "std_days": 0.8759746086188115,
+        "mode_days": 1.0
+      },
+      "release_lag_median_days": 0,
+      "timezone": "America/Mexico_City"
+    },
+    "data_quality": {
+      "source": "LME_COMBINED",
+      "total_records": 421,
+      "date_range": {
+        "min": "2024-01-02 00:00:00",
+        "max": "2025-08-29 00:00:00"
+      },
+      "missing_pct_by_col": {
+        "date": 0.0,
+        "sr_m01": 0.0,
+        "sc_m01": 0.0,
+        "rebar_scrap_spread": 0.0,
+        "rebar_scrap_ratio": 0.0
+      },
+      "duplicates": {
+        "exact": 0
+      },
+      "outliers": {
+        "sr_m01": 2,
+        "sc_m01": 0,
+        "rebar_scrap_spread": 0,
+        "rebar_scrap_ratio": 0
+      }
+    },
+    "imputation_policy": {
+      "method": "LOCF",
+      "max_carry_days": 3
+    },
+    "anti_leakage": {
+      "cutoff_time_tz": "23:59:59 America/Mexico_City",
+      "available_at_rule": "primary_time + 0 days"
+    },
+    "features": [
+      {
+        "name": "sr_m01_t0",
+        "uses_data_at": "t-0",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "same_day_close"
+      },
+      {
+        "name": "sr_m01_lag1",
+        "uses_data_at": "t-1",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-1"
+      },
+      {
+        "name": "sr_m01_lag5",
+        "uses_data_at": "t-5",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-5"
+      },
+      {
+        "name": "sr_m01_lag20",
+        "uses_data_at": "t-20",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-20"
+      },
+      {
+        "name": "sr_m01_pct_change_5d",
+        "uses_data_at": "t-1",
+        "transform": "pct_change_5",
+        "window": 5,
+        "availability_rule": "requires_t-1_to_t-window"
+      },
+      {
+        "name": "sr_m01_pct_change_20d",
+        "uses_data_at": "t-1",
+        "transform": "pct_change_20",
+        "window": 20,
+        "availability_rule": "requires_t-1_to_t-window"
+      },
+      {
+        "name": "sr_m01_ma20",
+        "uses_data_at": "t-1",
+        "transform": "rolling_mean",
+        "window": 20,
+        "availability_rule": "uses_t-1_to_t-20"
+      },
+      {
+        "name": "sc_m01_t0",
+        "uses_data_at": "t-0",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "same_day_close"
+      },
+      {
+        "name": "sc_m01_lag1",
+        "uses_data_at": "t-1",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-1"
+      },
+      {
+        "name": "sc_m01_lag5",
+        "uses_data_at": "t-5",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-5"
+      },
+      {
+        "name": "sc_m01_lag20",
+        "uses_data_at": "t-20",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-20"
+      },
+      {
+        "name": "sc_m01_pct_change_5d",
+        "uses_data_at": "t-1",
+        "transform": "pct_change_5",
+        "window": 5,
+        "availability_rule": "requires_t-1_to_t-window"
+      },
+      {
+        "name": "sc_m01_pct_change_20d",
+        "uses_data_at": "t-1",
+        "transform": "pct_change_20",
+        "window": 20,
+        "availability_rule": "requires_t-1_to_t-window"
+      },
+      {
+        "name": "sc_m01_ma20",
+        "uses_data_at": "t-1",
+        "transform": "rolling_mean",
+        "window": 20,
+        "availability_rule": "uses_t-1_to_t-20"
+      },
+      {
+        "name": "rebar_scrap_spread_t0",
+        "uses_data_at": "t-0",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "same_day_close"
+      },
+      {
+        "name": "rebar_scrap_spread_lag1",
+        "uses_data_at": "t-1",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-1"
+      },
+      {
+        "name": "rebar_scrap_spread_lag5",
+        "uses_data_at": "t-5",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-5"
+      },
+      {
+        "name": "rebar_scrap_spread_lag20",
+        "uses_data_at": "t-20",
+        "transform": "level",
+        "window": 1,
+        "availability_rule": "available_at <= cutoff_t-20"
+      },
+      {
+        "name": "rebar_scrap_spread_pct_change_5d",
+        "uses_data_at": "t-1",
+        "transform": "pct_change_5",
+        "window": 5,
+        "availability_rule": "requires_t-1_to_t-window"
+      },
+      {
+        "name": "rebar_scrap_spread_pct_change_20d",
+        "uses_data_at": "t-1",
+        "transform": "pct_change_20",
+        "window": 20,
+        "availability_rule": "requires_t-1_to_t-window"
+      },
+      {
+        "name": "rebar_scrap_spread_ma20",
+        "uses_data_at": "t-1",
+        "transform": "rolling_mean",
+        "window": 20,
+        "availability_rule": "uses_t-1_to_t-20"
+      }
+    ],
+    "units": "USD/ton",
+    "sample_preview": [
+      {
+        "date": "2024-01-02 00:00:00",
+        "sr_m01": 597.5,
+        "sc_m01": 411.0,
+        "rebar_scrap_spread": 186.5,
+        "rebar_scrap_ratio": 1.4537712895377128
+      },
+      {
+        "date": "2024-01-03 00:00:00",
+        "sr_m01": 595.0,
+        "sc_m01": 413.0,
+        "rebar_scrap_spread": 182.0,
+        "rebar_scrap_ratio": 1.4406779661016949
+      },
+      {
+        "date": "2024-01-04 00:00:00",
+        "sr_m01": 596.0,
+        "sc_m01": 418.5,
+        "rebar_scrap_spread": 177.5,
+        "rebar_scrap_ratio": 1.4241338112305857
+      },
+      {
+        "date": "2024-01-05 00:00:00",
+        "sr_m01": 594.5,
+        "sc_m01": 417.0,
+        "rebar_scrap_spread": 177.5,
+        "rebar_scrap_ratio": 1.4256594724220624
+      },
+      {
+        "date": "2024-01-08 00:00:00",
+        "sr_m01": 602.0,
+        "sc_m01": 420.0,
+        "rebar_scrap_spread": 182.0,
+        "rebar_scrap_ratio": 1.4333333333333331
+      },
+      {
+        "date": "2024-01-09 00:00:00",
+        "sr_m01": 600.0,
+        "sc_m01": 418.0,
+        "rebar_scrap_spread": 182.0,
+        "rebar_scrap_ratio": 1.4354066985645932
+      },
+      {
+        "date": "2024-01-10 00:00:00",
+        "sr_m01": 599.0,
+        "sc_m01": 415.0,
+        "rebar_scrap_spread": 184.0,
+        "rebar_scrap_ratio": 1.4433734939759035
+      },
+      {
+        "date": "2024-01-11 00:00:00",
+        "sr_m01": 602.5,
+        "sc_m01": 417.0,
+        "rebar_scrap_spread": 185.5,
+        "rebar_scrap_ratio": 1.4448441247002397
+      },
+      {
+        "date": "2024-01-12 00:00:00",
+        "sr_m01": 598.0,
+        "sc_m01": 414.0,
+        "rebar_scrap_spread": 184.0,
+        "rebar_scrap_ratio": 1.4444444444444444
+      },
+      {
+        "date": "2024-01-15 00:00:00",
+        "sr_m01": 601.0,
+        "sc_m01": 419.0,
+        "rebar_scrap_spread": 182.0,
+        "rebar_scrap_ratio": 1.4343675417661097
+      }
+    ]
+  }
+]

@@ -1,0 +1,105 @@
+{
+  "timestamp": "2025-09-29T16:49:23.501316",
+  "total_records": 3925,
+  "date_range": {
+    "start": "2015-01-01T00:00:00",
+    "end": "2025-09-29T00:00:00"
+  },
+  "feature_stats": {
+    "lme_sr_m01_lag1": {
+      "completeness": 0.9997452229299363,
+      "mean": 527.8582900101937,
+      "std": 127.3526941246114,
+      "outliers_pct": 0.014522292993630573
+    },
+    "usdmxn_lag1": {
+      "completeness": 0.9997452229299363,
+      "mean": 19.026391615698266,
+      "std": 1.6937988396397503,
+      "outliers_pct": 0.033885350318471334
+    },
+    "mexico_premium": {
+      "completeness": 1.0,
+      "mean": 1.157,
+      "std": 0.0,
+      "outliers_pct": 0.0
+    },
+    "lme_volatility_5d": {
+      "completeness": 1.0,
+      "mean": 0.0061487350388417066,
+      "std": 0.008290073918479182,
+      "outliers_pct": 0.07261146496815286
+    },
+    "lme_momentum_5d": {
+      "completeness": 1.0,
+      "mean": 0.0006825554067562838,
+      "std": 0.02037104286187694,
+      "outliers_pct": 0.13197452229299364
+    },
+    "contango_indicator": {
+      "completeness": 1.0,
+      "mean": -0.05197452229299363,
+      "std": 0.8938852757490047,
+      "outliers_pct": 0.0
+    },
+    "rebar_scrap_spread_norm": {
+      "completeness": 1.0,
+      "mean": 0.36930987270465426,
+      "std": 0.04010135898525632,
+      "outliers_pct": 0.0012738853503184713
+    },
+    "trade_events_impact_7d": {
+      "completeness": 1.0,
+      "mean": -0.002508999640381246,
+      "std": 0.09334861534183776,
+      "outliers_pct": 0.029554140127388533
+    },
+    "weekday_effect": {
+      "completeness": 1.0,
+      "mean": -2.547770700636938e-06,
+      "std": 0.0092603631581691,
+      "outliers_pct": 0.14292993630573247
+    },
+    "seasonality_simple": {
+      "completeness": 1.0,
+      "mean": 0.0004585987261146522,
+      "std": 0.015706067656697093,
+      "outliers_pct": 0.0
+    },
+    "real_interest_rate": {
+      "completeness": 1.0,
+      "mean": 7.3306552800875275,
+      "std": 2.5597628955068696,
+      "outliers_pct": 0.0
+    },
+    "uncertainty_indicator": {
+      "completeness": 1.0,
+      "mean": 0.5,
+      "std": 0.0,
+      "outliers_pct": 0.0
+    },
+    "market_regime": {
+      "completeness": 1.0,
+      "mean": -0.06802547770700637,
+      "std": 0.9526021550539941,
+      "outliers_pct": 0.0
+    },
+    "days_to_holiday": {
+      "completeness": 1.0,
+      "mean": 20.820891719745223,
+      "std": 10.240943972866846,
+      "outliers_pct": 0.0
+    },
+    "model_confidence": {
+      "completeness": 1.0,
+      "mean": 0.915605095541401,
+      "std": 0.0554305911275032,
+      "outliers_pct": 0.005859872611464968
+    }
+  },
+  "quality_summary": {
+    "avg_completeness": 0.9999660297239915,
+    "critical_features_ok": true,
+    "recommended_for_training": false
+  }
+}

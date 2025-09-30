@@ -1,0 +1,19 @@
+yaz_token_sie:32579942613d1555d2347fe008a3ccc17e3f568fb5a47ca9ba3234b1b77d75ef
+limites_de_consulta:https://www.banxico.org.mx/SieAPIRest/service/v1/doc/limiteConsultas
+
+SERIES ACTUALES DISPONIBLES (2025):
+SF43718: Tipo de cambio para solventar obligaciones denominadas en dólares de los EE.UU.A. FIX (diaria)
+SP1: Índice nacional de precios al consumidor - INPC General (mensual)
+SF43783: Tasa de Interés Interbancaria de Equilibrio - TIIE a 28 días (diaria)
+SR16734: Indicador global de la actividad económica - IGAE (mensual, último dato 2023)
+SP74665: Inflación no subyacente anual (mensual)
+
+SERIES DESCONTINUADAS (NO USAR - última obs junio 2011):
+SP9709: Índices de precios de genéricos para producción total 3403 Varilla corrugada
+SP67487: Indices de precios de genéricos para mercado de exportación 2403 Varilla corrugada
+SP66938: Indices de Precios productor para mercado nacional 1403 Varilla corrugada
+SP66321: Índice del costo de la construcción (ICC) Materiales utili Índice general Subindice materi 14. Productos de alambre Varilla
+SP68002: Actividad industrial manufacturera
+
+NOTA CRÍTICA: Banxico NO tiene datos de commodities (petróleo, gas, carbón, mineral de hierro, acero).
+Usar fuentes alternativas: LME, FRED, World Bank, EPU indices.

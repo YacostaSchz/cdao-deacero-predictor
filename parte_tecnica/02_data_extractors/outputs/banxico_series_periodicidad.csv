@@ -1,0 +1,6 @@
+serie_id,descripcion,titulo_oficial,periodicidad,unidad,fecha_inicio,fecha_fin
+SF43718,Tipo de cambio FIX peso/dólar (diaria),Tipo de cambio                                          Pesos por dólar E.U.A. Tipo de cambio para solventar obligaciones denominadas en moneda extranjera Fecha de determinación (FIX),Diaria,Pesos por Dólar,12/11/1991,26/09/2025
+SP1,INPC General - Índice de precios al consumidor,IPC Por objeto del gasto                                                         Nacional I n d i c e   G e n e r a l,Mensual,Sin Unidad,01/01/1969,01/08/2025
+SF43783,TIIE a 28 días (diaria),TIIE a 28 días Tasa de interés en por ciento anual,Diaria,Sin Unidad,23/03/1995,29/09/2025
+SR16734,Indicador global de actividad económica (IGAE),Indicador global de la actividad económica. Total (IGAE) Base 2013 Serie original,Mensual,Sin Unidad,01/01/1993,01/05/2023
+SP74665,Inflación no subyacente anual,Inflación No subyacente (nueva definición) Anual,Mensual,Sin Unidad,01/01/1983,01/08/2025

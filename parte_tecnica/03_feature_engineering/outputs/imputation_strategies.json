@@ -1,0 +1,38 @@
+{
+  "LME_STEEL_REBAR": {
+    "source": "UK holidays",
+    "frequency": "daily",
+    "strategy": "LOCF (Last Observation Carried Forward)",
+    "justification": "Precios de cierre se mantienen hasta siguiente día hábil",
+    "max_carry_days": 4,
+    "alternative": "Interpolación lineal si gap > 4 días"
+  },
+  "BANXICO_FX": {
+    "source": "Mexico holidays",
+    "frequency": "daily",
+    "strategy": "LOCF para fines de semana, interpolación para holidays largos",
+    "justification": "FIX publicado todos los días hábiles bancarios",
+    "max_carry_days": 3,
+    "weekend_strategy": "Viernes se extiende a sábado/domingo"
+  },
+  "EPU_INDICES": {
+    "source": "Múltiples países",
+    "frequency": "monthly",
+    "strategy": "No requiere imputación diaria",
+    "justification": "Datos mensuales no afectados por días inhábiles",
+    "consideration": "Publicación puede retrasarse por holidays"
+  },
+  "GAS_NATURAL": {
+    "source": "Mexico holidays",
+    "frequency": "monthly",
+    "strategy": "No requiere imputación diaria",
+    "justification": "Índice mensual"
+  },
+  "CROSS_MARKET": {
+    "scenario": "México abierto, LME cerrado",
+    "strategy": "Usar último precio LME + ajuste por movimiento FX",
+    "formula": "LME_t = LME_t-1 * (1 + β * ΔUSDMXN)",
+    "beta_estimated": 0.15,
+    "justification": "Captura efecto de movimientos cambiarios en ausencia de precio LME"
+  }
+}

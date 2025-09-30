@@ -1,0 +1,39 @@
+{
+  "predicted_price_usd_per_ton": 1065.23,
+  "predicted_price_mxn_per_ton": 20239.28,
+  "confidence": "Low",
+  "prediction_intervals": {
+    "usd": {
+      "lower_90%": 1030.72,
+      "upper_90%": 1100.98
+    },
+    "mxn": {
+      "lower_90%": 19583.71,
+      "upper_90%": 20918.69
+    }
+  },
+  "components": {
+    "lme_price_usd": 627.3410519560825,
+    "fx_rate_used": 19.0,
+    "premium_applied": 1.698,
+    "premium_percentage": 69.8
+  },
+  "metadata": {
+    "version": "1.0-honest",
+    "created_date": "2025-09-28T21:30:39.122054",
+    "data_points_used": 4,
+    "premium_based_on": 2,
+    "confidence": "Very Low",
+    "lme_model_type": "RandomForestRegressor",
+    "transfer_function": "Premium-based (69.8% \u00b1 3.4%)",
+    "warnings": [
+      "Based on only 4 historical Mexico price points",
+      "Premium calculated from only 2 LME-matched points",
+      "No real validation possible with current data",
+      "High uncertainty in predictions",
+      "FX rate may not reflect current market"
+    ]
+  },
+  "timestamp": "2025-09-28T21:30:39.246748",
+  "api_version": "1.0"
+}

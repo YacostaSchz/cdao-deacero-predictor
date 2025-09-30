@@ -1,0 +1,13 @@
+{
+  "prediction_date": "2025-09-29",
+  "predicted_price_usd_per_ton": 631.61,
+  "currency": "USD",
+  "unit": "metric_ton",
+  "model_confidence": 0.85,
+  "timestamp": "2025-09-28T20:55:19.585353Z",
+  "debug_info": {
+    "features_available": "100.0%",
+    "lme_base_price": 540.5,
+    "mexico_premium": 1.157
+  }
+}

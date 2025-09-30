@@ -1,0 +1,13 @@
+ANÁLISIS ECONOMÉTRICO COMPLETO - TODAS LAS VARIABLES
+============================================================
+
+Fecha: 2025-09-28 14:38:00.854262
+Variables analizadas: 11
+Período: 1979-01-01 00:00:00 a 2012-06-01 00:00:00
+
+HALLAZGOS PRINCIPALES:
+1. 6 variables Granger-causan REBAR
+2. 1 relaciones de cointegración
+3. Todas las series son I(1)
+4. Quiebres estructurales detectados
+5. Alta endogeneidad en variables intra-acero
